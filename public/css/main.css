@@ -1,0 +1,263 @@
+body {
+    margin: 0;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+
+    display: grid; /*rozmieszczenie elementów w wierszach lub kolumnach */
+    grid-template-columns: 5% 95%;
+
+
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 1em;
+
+}
+
+.fas {
+
+    text-align: center;
+    width: 2em;
+    height: 2em;
+    color:#244066;
+}
+
+.button, .buttonm {
+
+    font: italic normal bold 20px Roboto;
+    color: #244066;
+    border: none;
+    opacity: 1;
+    background-color: transparent;
+    border: transparent;
+
+}
+
+.blue-rectangle {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    background: #3C5576 0 0 no-repeat padding-box;
+    box-shadow: 6px 4px 6px #00000029;
+    opacity: 0.92;
+}
+
+.main {
+
+    display: grid;
+    grid-template-areas:
+              "l l a a"
+              "s s s s"
+              "s s s s";
+    width: 100%;
+    height: 100%;
+    grid-template-rows: 80px repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+}
+
+
+.sub{
+    grid-area: s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.repeated{
+    width: 70vw;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+
+}
+
+.img1{
+    width: 10vw;
+    height: 16vh;
+    border-radius: 22px;
+    background-image: url("../img/1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+
+
+}
+.img2{
+    width: 10vw;
+    height: 16vh;
+    border-radius: 22px;
+    background-image: url("../img/2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+.img3{
+    width: 10vw;
+    height: 16vh;
+    border-radius: 22px;
+    background-image: url("../img/3.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+
+
+
+.logo, .account{
+    color: white;
+    display: flex;
+    padding: 2.5em;
+    align-items: flex-end;
+    font-size: 12px;
+}
+
+.logo{
+    grid-area: l;
+}
+
+.account{
+
+    margin-top: 3.5em;
+    grid-area: a;
+    justify-content: flex-end;
+}
+
+h1{
+    margin: 0;
+    font: italic normal bold 30px/30px Roboto;
+    color: #244066;
+    opacity: 0.92;
+}
+
+
+@media only screen and (max-device-width: 420px)
+{
+    .container {
+        width: 100vw;
+        height: 100vh;
+
+        display: flex; /*rozmieszczenie elementów w wierszach lub kolumnach */
+
+    }
+
+    .main {
+
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-template-rows: 10% repeat(2, 1fr);
+
+    }
+
+    h1{
+        margin: 0;
+        font: italic normal bold 80px/80px Roboto;
+        color: #244066;
+        opacity: 0.92;
+        padding-bottom: 0.5em;
+    }
+
+    .account{
+
+        justify-content: flex-end;
+        margin-bottom: 0;
+    }
+
+
+    .sub{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .repeated{
+
+        width: 50vw;
+        height: 20vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+
+    }
+
+    .img1{
+
+        width: 35vw;
+        height: 35vh;
+        border-radius: 10px;
+        background-image: url("../img/1.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+
+
+    }
+    .img2{
+
+        width: 35vw;
+        height: 35vh;
+        border-radius: 10px;
+        background-image: url("../img/2.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+
+    }
+    .img3{
+
+        width: 35vw;
+        height: 35vh;
+        border-radius: 10px;
+        background-image: url("../img/3.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+
+    }
+
+    .button {
+
+        font-size: 0;
+        background: #FFFFFF 0 0 no-repeat padding-box;
+        box-shadow: 0px;
+        border: 0 solid #70707080;
+        border-radius: 0;
+        opacity: 1;
+
+    }
+
+    .fas
+    {
+        font-size: 65px;
+        color: #244066;
+
+    }
+
+
+    .buttonm {
+
+        height: 5em;
+        width: 18em;
+        background: #FFFFFF 0 0 no-repeat padding-box;
+        box-shadow: 0px 3px 6px #00000029;
+        border: 1px solid #70707080;
+        border-radius: 50px;
+        opacity: 1;
+        text-align: center;
+        font: normal normal medium 90px/110px Roboto;
+        padding-top: 1em;
+        letter-spacing: 0;
+        color: #033E6A;
+        margin: 0;
+    }
+
+    a {
+
+    }
+
+
+
+}

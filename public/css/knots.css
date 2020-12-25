@@ -1,0 +1,190 @@
+body {
+    margin: 0;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+
+    display: grid; /*rozmieszczenie elementów w wierszach lub kolumnach */
+    grid-template-rows: 10% 15% 60% 15%;
+
+}
+
+.menu {
+
+    background: #3C5576 0% 0% no-repeat padding-box;
+    box-shadow: 0px 4px 6px #00000029;
+    border: 1px solid #707070;
+    border-radius: 22px;
+    opacity: 0.92;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.button_nav
+{
+
+    font: italic normal bold 27px/35px Roboto;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 0.92;
+    margin-left: 1.3em;
+}
+
+.button {
+    font: italic normal bold 27px/35px Roboto;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+    align-items: flex-end;
+    margin-right: 1.3em;
+}
+
+.name {
+    font: italic normal bold 15px/27px Roboto;
+    letter-spacing: 0px;
+    color: #244066;
+    opacity: 0.92;
+    align-self: center;
+    margin-left: 3em;
+}
+
+.info
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+img{
+
+    height: 13em;
+    width: 17em;
+
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+}
+
+p {
+    height: 7em;
+    width: 40em;
+    font: italic normal bold 19px/26px Roboto;
+    letter-spacing: 0px;
+    color: #033E6A;
+    opacity: 1;
+}
+
+.knots_buttons {
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+button {
+
+    font: italic normal bold 18px/24px Roboto;
+    letter-spacing: 0px;
+    color: #4B6280;
+    opacity: 0.87;
+    background-color: transparent;
+    border: 0px solid transparent;
+
+
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+@media only screen and (max-device-width: 420px)
+{
+
+    .container {
+        width: 100vw;
+        height: 100vh;
+        display: grid; /*rozmieszczenie elementów w wierszach lub kolumnach */
+        grid-template-rows: 10% 12% 71% 8%;
+
+    }
+
+    .menu {
+
+        background:#FFFFFF 0% 0% no-repeat padding-box;
+        box-shadow: 0px 0px 0px #FFFFFF;
+        border: 0px solid #FFFFFF;
+        border-radius: 0px;
+    }
+
+    .account {
+        display: flex;
+        justify-content: space-evenly;
+        width: 27%;
+
+    }
+
+
+    .button {
+        font-size: 0;
+    }
+
+    .fas
+    {
+        font-size: 65px;
+        color: #3C5576;
+
+    }
+
+    .name {
+        align-self: start;
+        font: italic normal bold 35px/45px Roboto;
+        letter-spacing: 0px;
+        margin-left: 2em;
+    }
+
+    .img {
+
+        height: 40%;
+        width: 80%;
+    }
+
+    p {
+        height: 55%;
+        width: 90%;
+        margin-left: 1em;
+        font: italic normal bold 50px/60px Roboto;
+    }
+
+    .knots_buttons {
+
+        display: flex;
+        justify-content: space-between;
+        background: #3C5576 0% 0% no-repeat padding-box;
+        box-shadow: 0px -6px 6px #00000029;
+        border: 1px solid #707070;
+        border-radius: 22px;
+        opacity: 0.90;
+
+    }
+
+
+    button {
+        margin-left: 2.5em;
+        margin-right: 2.5em;
+        font: italic normal bold 35px/45px Roboto;
+        letter-spacing: 0px;
+        color: #FFFFFF;
+        opacity: 0.87;
+    }
+
+
+
+
+
+}
