@@ -1,0 +1,186 @@
+body {
+    margin: 0;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 10% 15% 10% 65%;
+
+}
+
+.menu {
+
+    background: #3C5576 0% 0% no-repeat padding-box;
+    box-shadow: 0px 4px 6px #00000029;
+    border: 1px solid #707070;
+    border-radius: 22px;
+    opacity: 0.92;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.button_nav
+{
+
+    font: italic normal bold 20px/30px Roboto;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 0.92;
+    margin-left: 1.3em;
+}
+
+
+.button {
+    font: italic normal bold 20px/30px Roboto;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+    align-items: flex-end;
+    margin-right: 1.3em;
+}
+
+.budowa{
+    font: italic normal bold 15px/27px Roboto;
+    letter-spacing: 0px;
+    color: #244066;
+    opacity: 0.92;
+    align-self: center;
+    margin-left: 3em;
+}
+
+.spis
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: italic normal normal 20px/30px Roboto;
+    letter-spacing: 0px;
+    opacity: 0.92;
+    color: #033E6A;
+}
+
+
+.tresc
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+
+
+
+ol li {
+    cursor: pointer;
+}
+
+ol li:hover {
+    background: #ddd;
+}
+
+
+
+li {
+
+    font: italic normal normal 20px/28px Roboto;
+    margin-top: 1em;
+    letter-spacing: 0px;
+    color: #033E6A;
+    text-shadow: 0px 3px 6px #00000029;
+
+}
+
+
+a {
+    text-decoration: none;
+}
+
+@media only screen and (max-device-width: 420px)
+{
+
+    .container {
+        width: 96vw;
+        height: 100vh;
+        display: grid;
+        grid-template-rows: 10% 15% 10% 65%;
+        padding: 2em 2em 2em 2em;
+
+    }
+
+    .menu {
+
+        background:#FFFFFF 0% 0% no-repeat padding-box;
+        box-shadow: 0px 0px 0px #FFFFFF;
+        border: 0px solid #FFFFFF;
+        border-radius: 0px;
+    }
+
+    .back-to-main {
+        display: flex;
+        align-items: center;
+        height: 80%;
+    }
+
+    .account {
+
+        display: flex;
+        justify-content: space-between;
+        width: 30%;
+        opacity: 0.92;
+
+    }
+    .button {
+        font-size: 0;
+    }
+
+    .fas{
+        font-size: 95px;
+        color: #8F9090;
+
+    }
+
+    .budowa {
+        display: flex;
+        font: italic normal bold 35px/45px Roboto;
+        letter-spacing: 0px;
+        margin-left: 0;
+    }
+
+    .spis{
+
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-start;
+        color: #244066;
+        opacity: 0.92;
+
+    }
+
+
+    .tresc {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    ol {
+        margin-left: 1em;
+    }
+    li {
+        margin-top: 1em;
+        font: italic normal bold 55px/65px Roboto;
+        color: #244066;
+        opacity: 0.92;
+
+    }
+
+    h2 {
+
+        font: italic normal bold 60px/70px Roboto;
+    }
+
+}

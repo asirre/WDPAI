@@ -14,8 +14,16 @@ class DefaultController extends AppController {
     }
 
 
-    public function test() {
-        $this->render('test');
+    public function boat() {
+        $this->render('boat');
+    }
+
+    public function naped() {
+        $this->render('naped');
+    }
+
+    public function kotwice() {
+        $this->render('kotwice');
     }
 
 

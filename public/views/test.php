@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-    <link rel="stylesheet" type="text/css" href="public/css/test.css">
+    <link rel="stylesheet" type="text/css" href="public/css/testy.css">
     <script src="https://kit.fontawesome.com/fffd297577.js" crossorigin="anonymous"></script>
     <title>MAIN</title>
 </head>
@@ -23,11 +23,13 @@
     <div class="question">
         <div class="img"></div>
         <div class="answers">
-            <h2>Na rysunku pokazano:</h2>
+            <?php $question = $questions[0]; ?>
+            <?php $a = $answers[0]; $b = $answers[1]; $c = $answers[2]; ?>
+            <h2><?= $question->getQuestion(); ?></h2>
             <ol>
-                <li>Kotwicę admiralicji</li>
-                <li>Kotwicę pługową</li>
-                <li>Kotwicę patentową Danfortha</li>
+                <li><?= $a->getAnswer(); ?></li>
+                <li><?= $b->getAnswer(); ?></li>
+                <li><?= $c->getAnswer(); ?></li>
             </ol>
         </div>
     </div>
@@ -36,7 +38,7 @@
         <a href="#" class="buttonm">następne pytanie</a>
     </div>
     <div class="test-end">
-        <a href="#" class="button-end">Zakończ test</a>
+        <a href="main" class="button-end">Zakończ test</a>
     </div>
 
 

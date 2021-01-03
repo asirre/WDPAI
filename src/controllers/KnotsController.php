@@ -17,7 +17,7 @@ class KnotsController extends AppController
 
     public function knots()
     {
-        $knots = $this->knotsRepository->getKnot();
+        $knots = $this->knotsRepository->getKnots();
         $this->render('knots', ['knots' => $knots]);
 
     }

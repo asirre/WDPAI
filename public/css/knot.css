@@ -5,8 +5,9 @@ body {
 .container {
     width: 100vw;
     height: 100vh;
-    display: grid;
-    grid-template-rows: 10% 15% 50% 13% 12%;
+
+    display: grid; /*rozmieszczenie elementów w wierszach lub kolumnach */
+    grid-template-rows: 10% 15% 60% 15%;
 
 }
 
@@ -25,20 +26,15 @@ body {
 .button_nav
 {
 
-    font: italic normal bold 27px/35px Roboto;
+    font: normal normal normal 17px/27px Roboto;
     letter-spacing: 0px;
     color: #FFFFFF;
     opacity: 0.92;
     margin-left: 1.3em;
 }
 
-.test-buttons {
-    display: flex;
-    justify-content: center;
-}
-
 .button {
-    font: italic normal bold 27px/35px Roboto;
+    font: normal normal normal 17px/27px Roboto;
     letter-spacing: 0px;
     color: #FFFFFF;
     opacity: 1;
@@ -46,22 +42,7 @@ body {
     margin-right: 1.3em;
 }
 
-.test-end {
-    display: grid;
-    justify-content: flex-end;
-    margin-right: 2em;
-}
-
-.button-end {
-
-    font: italic normal bold 22px/29px Roboto;
-    letter-spacing: 0px;
-    color: #244066;
-    text-shadow: 0px 3px 6px #00000029;
-    opacity: 0.92;
-
-}
-.test-menu {
+.name {
     font: italic normal bold 15px/27px Roboto;
     letter-spacing: 0px;
     color: #244066;
@@ -70,80 +51,66 @@ body {
     margin-left: 3em;
 }
 
-.question
+.info
 {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    justify-content: space-evenly;
+
 }
 
-.img {
+img{
 
-    height: 50%;
-    width: 20%;
-    background-image: url("../img/test.jpg");
+    height: 13em;
+    width: 17em;
+
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    box-shadow: 0px 7px 6px #00000029;
-    border-radius: 31px;
+
+}
+
+p {
+    height: 7em;
+    width: 40em;
+    font: italic normal bold 19px/26px Roboto;
+    letter-spacing: 0px;
+    color: #033E6A;
     opacity: 1;
-
-
 }
 
-h2 {
-    font: italic normal bold 26px/34px Roboto;
-    letter-spacing: 0px;
-    color: #033E6A;
-}
-
-ol li {
-    cursor: pointer;
-}
-
-ol li:hover {
-    background: #ddd;
-}
-
-
-
-li {
-
-    font: normal normal medium 44px/52px Roboto;
-    margin-top: 1em;
-    letter-spacing: 0px;
-    color: #033E6A;
-    text-shadow: 0px 3px 6px #00000029;
-
-}
-
-.test-buttons {
+.knots_buttons {
 
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
-
-.buttonm {
+button {
 
     font: italic normal bold 18px/24px Roboto;
     letter-spacing: 0px;
     color: #4B6280;
     opacity: 0.87;
+    background-color: transparent;
+    border: 0px solid transparent;
+
+
 }
 
 a {
     text-decoration: none;
 }
 
+
+
 @media only screen and (max-device-width: 420px)
 {
 
     .container {
-
-        display: grid;
-        grid-template-rows: 10% 8% 74% 8%;
+        width: 100vw;
+        height: 100vh;
+        display: grid; /*rozmieszczenie elementów w wierszach lub kolumnach */
+        grid-template-rows: 10% 12% 71% 8%;
 
     }
 
@@ -161,54 +128,40 @@ a {
         width: 27%;
 
     }
+
+
     .button {
         font-size: 0;
     }
 
-    .fas{
+    .fas
+    {
         font-size: 65px;
         color: #3C5576;
 
     }
 
-    .test-menu {
-        display: flex;
+    .name {
+        align-self: start;
         font: italic normal bold 35px/45px Roboto;
         letter-spacing: 0px;
         margin-left: 2em;
     }
 
-    .question {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-    }
-
     .img {
 
         height: 40%;
-        width: 75%;
+        width: 80%;
     }
 
-    .answers {
-        margin-top: 1em;
-        height: 50%;
+    p {
+        height: 55%;
         width: 90%;
         margin-left: 1em;
-        font: italic normal bold 40px/50px Roboto;
-    }
-
-    li {
-        margin: 90px 0;
-    }
-
-    h2 {
-        margin-bottom: 2em;
         font: italic normal bold 50px/60px Roboto;
     }
 
-    .test-buttons {
+    .knots_buttons {
 
         display: flex;
         justify-content: space-between;
@@ -221,7 +174,7 @@ a {
     }
 
 
-    .buttonm {
+    button {
         margin-left: 2.5em;
         margin-right: 2.5em;
         font: italic normal bold 35px/45px Roboto;
@@ -229,5 +182,9 @@ a {
         color: #FFFFFF;
         opacity: 0.87;
     }
+
+
+
+
 
 }

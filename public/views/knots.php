@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-    <link rel="stylesheet" type="text/css" href="public/css/knots.css">
+    <link rel="stylesheet" type="text/css" href="public/css/knot.css">
     <script src="https://kit.fontawesome.com/fffd297577.js" crossorigin="anonymous"></script>
     <title>MAIN</title>
 </head>

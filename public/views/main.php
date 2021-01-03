@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-    <link rel="stylesheet" type="text/css" href="public/css/main.css">
+    <link rel="stylesheet" type="text/css" href="public/css/nav.css">
     <script src="https://kit.fontawesome.com/fffd297577.js" crossorigin="anonymous"></script>
     <title>MAIN</title>
 </head>
@@ -22,7 +22,7 @@
             <div class="repeated">
                 <div class="img1">
                 </div>
-                <a href="#" class="buttonm">Poznaj budowę jachtu</a>
+                <a href="boat" class="buttonm">Poznaj budowę jachtu</a>
             </div>
             <div class="repeated">
                 <div class="img2">
