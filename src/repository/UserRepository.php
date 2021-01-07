@@ -9,8 +9,7 @@ class UserRepository extends Repository
     public function getUser(string $email): ?User
     {
         $stmt = $this->database->connect()->prepare('
-            SELECT * FROM users u LEFT JOIN users_details ud 
-            ON u.id_user_details = ud.id WHERE email = :email
+            SELECT * FROM users_info_view WHERE email = :email
         ');
         $stmt->bindParam(':email', $email, PDO::PARAM_STR);
         $stmt->execute();
@@ -28,6 +27,33 @@ class UserRepository extends Repository
             $user['surname']
         );
     }
+
+    public function getId(string $email)
+    {
+        $statement = $this->database->connect()->prepare('
+        SELECT id FROM public.users WHERE email = :email');
+        $statement->bindParam(':email', $email, PDO::PARAM_STR);
+        $statement->execute();
+        $id = $statement->fetch(PDO::FETCH_ASSOC);
+        if ($id == false) {
+            return null;
+        }
+        return $id;
+    }
+
+    public function checkEmail($email): bool
+    {
+        $statement = $this->database->connect()->prepare('
+        SELECT email FROM public.users_info_view WHERE email = :email');
+        $statement->bindParam(':email', $email, PDO::PARAM_STR);
+        $statement->execute();
+        $found = $statement->fetch(PDO::FETCH_ASSOC);
+        if (!$found) {
+            return false;
+        }
+        return true;
+    }
+
 
     public function addUser(User $user)
     {
@@ -64,4 +90,29 @@ class UserRepository extends Repository
         $data = $stmt->fetch(PDO::FETCH_ASSOC);
         return $data['id'];
     }
+
+    public function updateUserDetails($id, $password, $email)
+    {
+        if ($password != null) {
+            $statement1 = $this->database->connect()->prepare('
+        UPDATE public.users SET  password = :password WHERE id = :id
+        ');
+            $statement1->bindParam(':password', $password, PDO::PARAM_STR);
+            $statement1->bindParam(':id', $id, PDO::PARAM_INT);
+            $statement1->execute();
+
+        }
+
+        $statement2 = $this->database->connect()->prepare('
+        UPDATE public.users SET email = :email WHERE id=:id
+        ');
+        $statement2->bindParam(':email', $email, PDO::PARAM_STR);
+        $statement2->bindParam(':id', $id, PDO::PARAM_INT);
+        $statement2->execute();
+
+
+
+
+    }
+
 }

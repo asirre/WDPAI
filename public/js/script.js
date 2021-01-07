@@ -14,8 +14,6 @@ function markValidation(element, condition) {
     !condition ? element.classList.add('no-valid') : element.classList.remove('no-valid');
 }
 
-
-
 function validateEmail() {
     setTimeout(function () {
             markValidation(emailInput, isEmail(emailInput.value));
@@ -24,11 +22,10 @@ function validateEmail() {
     );
 }
 
-
 function validatePassword() {
     setTimeout(function () {
             const condition = arePasswordsSame(
-                confirmedPasswordInput.previousElementSibling.valueOf(),
+                confirmedPasswordInput.previousElementSibling.nodeValue,
                 confirmedPasswordInput.value
             );
             markValidation(confirmedPasswordInput, condition);
@@ -39,5 +36,3 @@ function validatePassword() {
 
 emailInput.addEventListener('keyup', validateEmail);
 confirmedPasswordInput.addEventListener('keyup', validatePassword);
-
-

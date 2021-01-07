@@ -100,10 +100,10 @@ button {
     border: 1px solid #707070;
     border-radius: 38px;
     color: white;
-
-
+    cursor: pointer;
 
 }
+
 
 input {
 
@@ -115,6 +115,10 @@ input {
     border: 1px solid #707070BD;
     border-radius: 25px;
     opacity: 0.93;
+}
+
+input:focus {
+    outline: none;
 }
 
 .messages

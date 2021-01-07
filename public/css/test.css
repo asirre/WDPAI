@@ -10,40 +10,15 @@ body {
 
 }
 
-.menu {
-
-    background: #3C5576 0% 0% no-repeat padding-box;
-    box-shadow: 0px 4px 6px #00000029;
-    border: 1px solid #707070;
-    border-radius: 22px;
-    opacity: 0.92;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.button_nav
+.answers
 {
+    width: 45%;
 
-    font: normal normal normal 17px/27px Roboto;
-    letter-spacing: 0px;
-    color: #FFFFFF;
-    opacity: 0.92;
-    margin-left: 1.3em;
 }
 
 .test-buttons {
     display: flex;
     justify-content: center;
-}
-
-.button {
-    font: normal normal normal 17px/27px Roboto;
-    letter-spacing: 0px;
-    color: #FFFFFF;
-    opacity: 0.92;
-    align-items: flex-end;
-    margin-right: 1.3em;
 }
 
 .test-end {
@@ -52,7 +27,7 @@ body {
     margin-right: 2em;
 }
 
-.button-end {
+#button-end {
 
     font: italic normal bold 22px/29px Roboto;
     letter-spacing: 0px;
@@ -67,7 +42,7 @@ body {
     color: #244066;
     opacity: 0.92;
     align-self: center;
-    margin-left: 3em;
+    margin-left: 1.3em;
 }
 
 .question
@@ -77,35 +52,33 @@ body {
     align-items: center;
     justify-content: space-evenly;
 }
+.img{
+    width: 30em;
+    height: 13em;
+    display: flex;
+    justify-content: flex-end;
+}
+img {
 
-.img {
-
-    height: 50%;
-    width: 20%;
-    background-image: url("../img/test.jpg");
+    height: 13em;
+    width: 17em;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     box-shadow: 0px 7px 6px #00000029;
     border-radius: 31px;
     opacity: 1;
-
-
 }
 
 h2 {
-    font: italic normal bold 26px/34px Roboto;
+    font: italic normal bold 24px/30px Roboto;
     letter-spacing: 0px;
     color: #033E6A;
 }
 
 ol li {
     cursor: pointer;
-}
 
-ol li:hover {
-    background: #ddd;
 }
-
 
 
 li {
@@ -115,6 +88,7 @@ li {
     letter-spacing: 0px;
     color: #033E6A;
     text-shadow: 0px 3px 6px #00000029;
+    width: 60%;
 
 }
 
@@ -125,9 +99,9 @@ li {
     align-items: center;
 }
 
-.buttonm {
+#next_question, #previous_question{
 
-    font: italic normal bold 18px/24px Roboto;
+    font: italic normal normal 18px/24px Roboto;
     letter-spacing: 0px;
     color: #4B6280;
     opacity: 0.87;
@@ -135,6 +109,18 @@ li {
 
 a {
     text-decoration: none;
+}
+
+li.no-valid {
+    border: 3px solid red;
+    box-shadow: 0 0 0.2em red;
+    outline: none;
+}
+
+li.valid {
+    border: 3px solid green;
+    box-shadow: 0 0 0.2em green;
+    outline: none;
 }
 
 @media only screen and (max-device-width: 420px)
@@ -161,18 +147,16 @@ a {
         width: 27%;
 
     }
-    .button {
-        font-size: 0;
-    }
 
     .fas{
         font-size: 65px;
-        color: #3C5576;
+        color: white;
 
     }
 
     .test-menu {
         display: flex;
+        justify-content: space-between;
         font: italic normal bold 35px/45px Roboto;
         letter-spacing: 0px;
         margin-left: 2em;
@@ -187,20 +171,28 @@ a {
 
     .img {
 
-        height: 40%;
-        width: 75%;
+        height: 35%;
+        width: 70%;
+    }
+
+    img
+    {
+        height: 100%;
+        width: 100%;
     }
 
     .answers {
-        margin-top: 1em;
+
         height: 50%;
         width: 90%;
         margin-left: 1em;
-        font: italic normal bold 40px/50px Roboto;
+        font: italic normal normal 40px/50px Roboto;
+        text-shadow: none;
     }
 
     li {
-        margin: 90px 0;
+        margin: 60px 0;
+        width: 90%;
     }
 
     h2 {
@@ -219,9 +211,12 @@ a {
         opacity: 0.90;
 
     }
+    a{
+        font: italic normal normal 38px/44px Roboto;
+    }
 
-
-    .buttonm {
+    #next_question, #previous_question
+    {
         margin-left: 2.5em;
         margin-right: 2.5em;
         font: italic normal bold 35px/45px Roboto;

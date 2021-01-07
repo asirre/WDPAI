@@ -6,25 +6,26 @@ require_once __DIR__ . '/../models/Question.php';
 class TestRepository extends Repository
 {
 
-    public function getQuestions(): array
+    public function getQuestion(int $id): ?Question
     {
-        $result = [];
-        $stmt = $this->database->connect()->prepare('
-            SELECT * FROM public.test ');
 
+        $stmt = $this->database->connect()->prepare('
+            SELECT * FROM public.test WHERE id = :id ');
+
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
         $stmt->execute();
 
-        $questions = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $question = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        foreach ($questions as $question) {
-            $result[] = new Question(
-                $question['question'],
-                $question['correct_ans'],
-                $question['image']
-            );
+        if ($question == false) {
+            return null;
         }
 
-        return $result;
+        return new Question(
+            $question['question'],
+            $question['id_correct_ans'],
+            $question['image']
+        );
 
     }
 }

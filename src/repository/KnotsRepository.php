@@ -25,11 +25,20 @@ class KnotsRepository extends Repository
         );
     }
 
-    public function getKnots(): array
+    public function getKnots(int $page = null, int $pageSize = 6): array
     {
         $result = [];
+
+
         $stmt = $this->database->connect()->prepare('
-            SELECT * FROM public.knots ');
+            SELECT * FROM public.knots LIMIT :page_size OFFSET :page
+        ');
+
+        if($page) {
+            $stmt->bindParam(':page', $page, PDO::PARAM_INT);
+            $stmt->bindParam(':page_size', $pageSize, PDO::PARAM_INT);
+        }
+
 
         $stmt->execute();
 
@@ -47,7 +56,5 @@ class KnotsRepository extends Repository
         return $result;
 
     }
-}
-    {
 }
 

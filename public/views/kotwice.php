@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <head>
-    <link rel="stylesheet" type="text/css" href="public/css/kotwica.css">
+    <link rel="stylesheet" type="text/css" href="public/css/kotwice.css">
+    <link rel="stylesheet" type="text/css" href="public/css/header.css">
     <script type="text/javascript" src="./public/js/info.js" defer></script>
+    <script type="text/javascript" src="./public/js/dynamicButtons.js" defer></script>
     <script src="https://kit.fontawesome.com/fffd297577.js" crossorigin="anonymous"></script>
     <title>BOAT</title>
 </head>
@@ -9,11 +11,11 @@
 <div class="container">
     <div class="menu">
         <div class="back-to-main">
-            <a href="main" class="button_nav"><i class="fas fa-home"></i>  Powrót do nawigatora</a>
+            <button id="nav" class="button_nav"><i class="fas fa-home"></i>  Powrót do nawigatora</button>
         </div>
         <div class="account">
-            <a href="#" class="button"><i class="fas fa-user-circle icon-2x"></i>  twoje konto</a>
-            <a href="login" class="button"><i class="fas fa-sign-out-alt icon-2x"></i>  wyloguj się</a>
+            <button class="konto"><i class="fas fa-user-circle icon-2x"></i>  twoje konto</button>
+            <button class="logout"><i class="fas fa-sign-out-alt icon-2x"></i>  wyloguj się</button>
         </div>
     </div>
 

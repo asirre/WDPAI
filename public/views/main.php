@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <head>
-    <link rel="stylesheet" type="text/css" href="public/css/nav.css">
+    <link rel="stylesheet" type="text/css" href="public/css/main.css">
+    <script type="text/javascript" src="./public/js/dynamicButtons.js" defer></script>
     <script src="https://kit.fontawesome.com/fffd297577.js" crossorigin="anonymous"></script>
     <title>MAIN</title>
 </head>
@@ -15,24 +16,24 @@
         <div class="account">
             <a href="#" class="button"><i class="fas fa-user-circle icon-2x"></i>twoje konto</a>
 
-            <a href="login" class="button"><i class="fas fa-sign-out-alt icon-2x"></i>wyloguj się</a>
+            <a href="login" class="button"><?php session_destroy()?><i class="fas fa-sign-out-alt icon-2x"></i>wyloguj się</a>
 
         </div>
         <div class="sub">
             <div class="repeated">
                 <div class="img1">
                 </div>
-                <a href="boat" class="buttonm">Poznaj budowę jachtu</a>
+                <button id="boat" class="buttons">Poznaj budowę jachtu</button>
             </div>
             <div class="repeated">
                 <div class="img2">
                 </div>
-                <a href="knots" class="buttonm">Poćwicz węzły</a>
+                <button id="knots" class="buttons">Poćwicz węzły</button>
             </div>
             <div class="repeated">
                 <div class="img3">
                 </div>
-                <a href="test" class="buttonm">Rozwiąż test</a>
+                <button id="test" class="buttons">Rozwiąż test</button>
 
             </div>
         </div>

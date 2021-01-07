@@ -12,7 +12,7 @@ body {
 
 }
 
-a {
+.buttons{
     text-decoration: none;
     display: inline-block;
     margin-left: 1em;
@@ -27,7 +27,7 @@ a {
     color:#244066;
 }
 
-.button, .buttonm {
+.button, .buttons {
 
     font: italic normal bold 20px Roboto;
     color: #244066;
@@ -136,8 +136,7 @@ h1{
     .container {
         width: 100vw;
         height: 100vh;
-
-        display: flex; /*rozmieszczenie elementów w wierszach lub kolumnach */
+        display: flex;
 
     }
 

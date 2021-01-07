@@ -15,13 +15,16 @@ class TestController extends AppController
         parent::__construct();
         $this->testRepository = new TestRepository();
         $this->answerRepository = new AnswerRepository();
+
     }
 
 
     public function test()
     {
-        $questions = $this->testRepository->getQuestions();
-        $this->render('test', ['questions' => $questions]);
+        $page = (int) $_GET['page'] ?? 1;
+        $question = $this->testRepository->getQuestion($page);
+        $answers = $this->answerRepository->getAnswers($page);
+        $this->render('test', ['question' => $question,'answers' => $answers, 'page' => $page]);
 
     }
 }

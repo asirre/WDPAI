@@ -29,7 +29,8 @@ body {
 }
 
 
-.login-container {
+.login-container
+{
     width: 50%;
     height: 80%;
     display: grid;
@@ -61,9 +62,7 @@ h1
     color: #244066;
 }
 
-
-
-form.login {
+form.register {
 
     display: flex;
     flex-direction: column;
@@ -79,50 +78,38 @@ form.login {
 .inputs {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
-    height: 40%;
+    height: 60%;
 }
 
-.buttons
+.button
 {
     height: 20%;
     display: flex;
     justify-content: space-evenly;
 }
-.link
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
-}
 
-a {
-    font: normal normal normal 14px/18px Roboto;
-    line-height: 0.5em;
-    text-decoration: none;
-    color: white;
-}
+button {
 
-button, .link {
-
-    font: normal normal normal 14px/18px Roboto;
-    width: 32%;
+    width: 30%;
     height: 55%;
     background: #244066 0% 0% no-repeat padding-box;
     box-shadow: 0px 3px 6px #00000029;
     border: 1px solid #707070;
     border-radius: 38px;
     color: white;
+    cursor: pointer;
 
 }
+
 
 input {
 
     margin-top: 0%;
     width: 75%;
-    height: 30%;
+    height: 20%;
     background: #FFFFFF 0% 0% no-repeat padding-box;
     box-shadow: 0px 3px 6px #00000029;
     border: 1px solid #707070BD;
@@ -130,10 +117,21 @@ input {
     opacity: 0.93;
 }
 
+input:focus {
+    outline: none;
+}
+
 .messages
 {
     align-self: center;
     height: 10%;
+}
+
+.no-valid {
+    border: 3px solid red;
+    border-radius: 1em;
+    box-shadow: 0 0 0.2em red;
+    outline: none;
 }
 
 @media only screen and (max-device-width: 420px)
@@ -175,7 +173,7 @@ input {
         margin:auto;
     }
 
-    form.login {
+    form.register {
 
         display: flex;
         justify-content: flex-start;
@@ -186,20 +184,13 @@ input {
         opacity: 0.9;
 
     }
-    .link
-    {
-        width: 60%;
-        background-color: transparent;
-        box-shadow: 0px 0px 0px 0px transparent;
-        border: 0;
-    }
 
-    .buttons {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .inputs
+    {
+        height: 100%;
+        background-color: transparent;
     }
-    button, a {
+    button {
 
         background:0;
         background-color: transparent;

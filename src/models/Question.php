@@ -6,13 +6,13 @@ class Question
 {
 
     private $question;
-    private $correct_ans;
+    private $id_correct_ans;
     private $image;
 
     public function __construct($question, $correct_ans, $image)
     {
         $this->question = $question;
-        $this->correct_ans = $correct_ans;
+        $this->id_correct_ans = $correct_ans;
         $this->image = $image;
     }
 
@@ -28,15 +28,15 @@ class Question
     }
 
 
-    public function getCorrectAns()
+    public function getIdCorrectAns()
     {
-        return $this->correct_ans;
+        return $this->id_correct_ans;
     }
 
 
-    public function setCorrectAns($correct_ans): void
+    public function setIdCorrectAns($id_correct_ans): void
     {
-        $this->correct_ans = $correct_ans;
+        $this->id_correct_ans = $id_correct_ans;
     }
 
     public function getImage()

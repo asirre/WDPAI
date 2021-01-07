@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-    <link rel="stylesheet" type="text/css" href="public/css/register.css">
+    <link rel="stylesheet" type="text/css" href="public/css/registers.css">
     <script type="text/javascript" src="./public/js/script.js" defer></script>
     <title>REGISTER</title>
 </head>
@@ -14,10 +14,10 @@
         <div class="vademecum">
             <h1>Twoje żeglarskie vademecum zawsze pod ręką</h1>
         </div>
-        <form class="register" action="register" method="POST">
+        <form  action="user-update" method="POST">
             <div class="messages">
                 <?php
-                    if(isset($messages)) {
+                if(isset($messages)) {
                     foreach ($messages as $message) {
                         echo $message;
                     }
@@ -25,14 +25,15 @@
                 ?>
             </div>
             <div class="inputs">
-                <input name="email" type="text" placeholder="email@email.com" required>
-                <input name="password" type="password" placeholder="password" required>
-                <input name="confirmedPassword" type="password" placeholder="confirm password" required>
-                <input name="name" type="text" placeholder="name" required>
-                <input name="surname" type="text" placeholder="surname" required>
+                <input name="name" type="text" value="<?= $user->getName() ?>" >
+                <input name="surname" type="text" value="<?= $user->getSurname() ?>">
+                <input name="email" type="text" placeholder="email">
+                <input name="password" type="password" placeholder="password">
+                <input name="confirmedPassword" type="password" placeholder="confirm password">
+
             </div>
             <div class="button">
-                <button type="submit">zarejestruj się</button>
+                <button type="submit">zaaktualizuj</button>
             </div>
 
         </form>

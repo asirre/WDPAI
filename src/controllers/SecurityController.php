@@ -16,8 +16,12 @@ class SecurityController extends AppController {
 
     public function login()
     {
-
+        session_start();
         if (!$this->isPost()) {
+            session_start();
+            if (isset($_SESSION['id'])) {
+                session_destroy();
+            }
             return $this->render('login');
         }
 
@@ -38,6 +42,12 @@ class SecurityController extends AppController {
             return $this->render('login', ['messages' => ['Wrong password!']]);
         }
 
+        $_SESSION['email'] = $user->getEmail();
+        $_SESSION['name'] = $user->getName();
+        $_SESSION['surname'] = $user->getSurname();
+        $id = $this->userRepository->getId($user->getEmail());
+        $_SESSION['id'] = $id['id'];
+
         $url = "http://$_SERVER[HTTP_HOST]";
         header("Location: {$url}/main");
     }
@@ -54,15 +64,18 @@ class SecurityController extends AppController {
         $name = $_POST['name'];
         $surname = $_POST['surname'];
 
-        if ($password !== $confirmedPassword) {
-            return $this->render('register', ['messages' => ['Please provide proper password']]);
+        if ($this->userRepository->checkEmail($email)) {
+            return $this->render('register', ['messages' => ['User with this email already exists!']]);
         }
 
-        //TODO try to use better hash function
-        $user = new User($email, md5($password), $name, $surname);
+
+        //TODO try to use better hash function md5
+        $user = new User($email, $password, $name, $surname);
 
         $this->userRepository->addUser($user);
 
         return $this->render('login', ['messages' => ['You\'ve been succesfully registrated!']]);
     }
+
+
 }
