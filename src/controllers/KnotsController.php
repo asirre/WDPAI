@@ -15,10 +15,19 @@ class KnotsController extends AppController
     }
 
 
+
     function knots()
     {
         $page = (int) $_GET['page'] ?? 1;
-        $knot = $this->knotsRepository->getKnot($page);
-        $this->render('knots', ['knot' => $knot, 'page' => $page]);
+        $knot = $this->knotsRepository->getKnots($page);
+        if(is_null($knot))
+        {
+            unset($_GET['page']);
+            $_GET['page'] = '1';
+            $page = 1 ;
+            echo $_GET['page'], $page;
+        }
+            $this->render('knots', ['knot' => $knot, 'page' => $page]);
+
     }
 }

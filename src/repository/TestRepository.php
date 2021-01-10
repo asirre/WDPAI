@@ -6,13 +6,18 @@ require_once __DIR__ . '/../models/Question.php';
 class TestRepository extends Repository
 {
 
-    public function getQuestion(int $id): ?Question
+    public function getQuestion(int $page = null): ?Question
     {
 
         $stmt = $this->database->connect()->prepare('
-            SELECT * FROM public.test WHERE id = :id ');
+            SELECT * FROM public.knots LIMIT 1 OFFSET :page-1
+        ');
 
-        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+
+        if($page) {
+            $stmt->bindParam(':page', $page, PDO::PARAM_INT);
+        }
+
         $stmt->execute();
 
         $question = $stmt->fetch(PDO::FETCH_ASSOC);

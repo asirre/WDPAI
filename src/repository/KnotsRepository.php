@@ -25,35 +25,36 @@ class KnotsRepository extends Repository
         );
     }
 
-    public function getKnots(int $page = null, int $pageSize = 6): array
+
+    public function getKnots(int $page = null, int $pageSize = 6): ?Knot
     {
-        $result = [];
 
 
         $stmt = $this->database->connect()->prepare('
-            SELECT * FROM public.knots LIMIT :page_size OFFSET :page
+            SELECT * FROM public.knots LIMIT 1 OFFSET :page-1
         ');
+
+
 
         if($page) {
             $stmt->bindParam(':page', $page, PDO::PARAM_INT);
-            $stmt->bindParam(':page_size', $pageSize, PDO::PARAM_INT);
+            //$stmt->bindParam(':page_size', $pageSize, PDO::PARAM_INT);
         }
 
 
         $stmt->execute();
 
-        $knots = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $knot = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        foreach ($knots as $knot)
-        {
-            $result[] = new Knot(
-                $knot['name'],
-                $knot['text'],
-                $knot['image']
-            );
+        if ($knot == false) {
+            return null;
         }
 
-        return $result;
+        return new Knot(
+            $knot['name'],
+            $knot['text'],
+            $knot['image']
+        );
 
     }
 }

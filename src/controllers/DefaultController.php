@@ -30,6 +30,11 @@ class DefaultController extends AppController {
         $this->render('kotwice');
     }
 
+    public function user() {
+        session_start();
+        $this->render('user');
+    }
+
 
 
 

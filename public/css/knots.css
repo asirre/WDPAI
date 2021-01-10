@@ -7,9 +7,16 @@ body {
     height: 100vh;
 
     display: grid; /*rozmieszczenie elementów w wierszach lub kolumnach */
-    grid-template-rows: 10% 13% 62% 15%;
+    grid-template-rows: 10% 75% 15%;
 
 }
+
+.knots {
+
+    display: grid;
+    grid-template-rows: 20% 80%;
+}
+
 
 
 .name {
@@ -25,7 +32,7 @@ body {
 {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
 
 }
