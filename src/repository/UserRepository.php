@@ -74,7 +74,7 @@ class UserRepository extends Repository
 
         $stmt->execute([
             $user->getEmail(),
-            $user->getPassword(),
+            password_hash($user->getPassword(),PASSWORD_DEFAULT),
             $this->getUserDetailsId($user)
         ]);
     }

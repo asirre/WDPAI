@@ -6,16 +6,16 @@ require_once __DIR__ . '/../models/Answer.php';
 class AnswerRepository extends Repository
 {
 
-    public function getAnswers(int $page = null): array
+    public function getAnswers(int $question_id): array
     {
-        $page_limit = $page*3;
+
         $result = [];
         $stmt = $this->database->connect()->prepare('
-            SELECT * FROM public.answers LIMIT :page_limit OFFSET (:page_limit-3)
+            SELECT * FROM public.answers WHERE answers.question_id = :question_id
         ');
 
-        if($page) {
-            $stmt->bindParam(':page_limit', $page_limit, PDO::PARAM_INT);
+        if($question_id) {
+            $stmt->bindParam(':question_id', $question_id, PDO::PARAM_INT);
         }
         $stmt->execute();
 
@@ -24,7 +24,9 @@ class AnswerRepository extends Repository
         foreach ($answers as $answer) {
             $result[] = new Answer(
                 $answer['id'],
-                $answer['answer']
+                $answer['answer'],
+                $answer['is_correct'],
+                $answer['question_id']
             );
         }
 

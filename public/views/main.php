@@ -1,6 +1,9 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <head>
-    <link rel="stylesheet" type="text/css" href="public/css/main.css">
+    <link rel="stylesheet" type="text/css" href="public/css/mains.css">
     <script type="text/javascript" src="./public/js/dynamicButtons.js" defer></script>
     <script src="https://kit.fontawesome.com/fffd297577.js" crossorigin="anonymous"></script>
     <title>MAIN</title>
@@ -10,13 +13,15 @@
     <div class="blue-rectangle">
     </div>
     <div class="main">
+        <?php $name = $_SESSION['name']?>
         <div class="logo">
-            <h1>Navigator</h1>
+            <h1>Witaj <?= $name ?> !</h1>
+
         </div>
         <div class="account">
             <a href="#" class="button"><i class="fas fa-user-circle icon-2x"></i>twoje konto</a>
 
-            <a href="login" class="button"><?php session_destroy()?><i class="fas fa-sign-out-alt icon-2x"></i>wyloguj się</a>
+            <a href="login" class="button"><?php session_destroy() ?><i class="fas fa-sign-out-alt icon-2x"></i>wyloguj się</a>
 
         </div>
         <div class="sub">

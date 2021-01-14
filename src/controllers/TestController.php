@@ -21,10 +21,12 @@ class TestController extends AppController
 
     public function test()
     {
+        Shared::checkSession();
         $page = (int) $_GET['page'] ?? 1;
         $question = $this->testRepository->getQuestion($page);
-        $answers = $this->answerRepository->getAnswers($page);
-        $this->render('test', ['question' => $question,'answers' => $answers, 'page' => $page]);
+        $answers = $this->answerRepository->getAnswers($question->getId());
+        $max_pages = $this->testRepository->getPages();
+        $this->render('test', ['question' => $question,'answers' => $answers, 'page' => $page, 'max_pages' => $max_pages]);
 
     }
 }

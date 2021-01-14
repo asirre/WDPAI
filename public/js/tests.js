@@ -1,5 +1,3 @@
-
-
 let exit = document.getElementById('button-end');
 
 
@@ -9,24 +7,25 @@ if (exit != null) {
     });
 }
 
+let a = document.getElementById('true');
+let b = document.getElementById('false');
 
-function isCorrect(correct_id,ans_id) {
 
-
-    var element = document.getElementById(ans_id);
-    var correct = document.getElementById(correct_id);
-
-    if(correct_id === ans_id)
-    {
-        element.classList.add('valid');
-
-    }
-    else
-    {
-        element.classList.add('no-valid');
-        correct.classList.add('valid');
-    }
+if (a != null) {
+    a.addEventListener('click', function () {
+        a.classList.add('valid');
+    });
 }
+
+if (b != null) {
+    b.addEventListener('click', function () {
+        b.classList.add('no-valid');
+        a.classList.add('valid');
+
+    });
+}
+
+
 
 let next = document.getElementById('next_question');
 
@@ -51,6 +50,5 @@ function previousQuestion(page) {
     }
 
 }
-
 
 

@@ -5,18 +5,14 @@ body {
 .container {
     width: 100vw;
     height: 100vh;
-
     display: grid; /*rozmieszczenie elementów w wierszach lub kolumnach */
     grid-template-columns: 5% 95%;
-
 
 }
 
 .buttons{
-    text-decoration: none;
     display: inline-block;
     margin-left: 1em;
-
 }
 
 .fas {
@@ -35,6 +31,9 @@ body {
     opacity: 1;
     background-color: transparent;
     border: transparent;
+    cursor: pointer;
+    text-decoration: none;
+
 
 }
 

@@ -16,6 +16,8 @@ class SecurityController extends AppController {
 
     public function login()
     {
+        session_cache_limiter('private');
+        session_cache_expire(10);
         session_start();
         if (!$this->isPost()) {
             session_start();
@@ -38,7 +40,7 @@ class SecurityController extends AppController {
             return $this->render('login', ['messages' => ['User with this email not exist!']]);
         }
 
-        if ($user->getPassword() !== $password) {
+        if (!password_verify($password, $user->getPassword())) {
             return $this->render('login', ['messages' => ['Wrong password!']]);
         }
 
@@ -47,6 +49,7 @@ class SecurityController extends AppController {
         $_SESSION['surname'] = $user->getSurname();
         $id = $this->userRepository->getId($user->getEmail());
         $_SESSION['id'] = $id['id'];
+        $_SESSION['points'] = 0;
 
         $url = "http://$_SERVER[HTTP_HOST]";
         header("Location: {$url}/main");

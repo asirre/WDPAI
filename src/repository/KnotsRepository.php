@@ -4,25 +4,24 @@ require_once __DIR__.'/../models/Knot.php';
 
 class KnotsRepository extends Repository
 {
-    public function getKnot(int $id): ?Knot
+
+    public function getPages(): ?int
     {
+
+
         $stmt = $this->database->connect()->prepare('
-            SELECT * FROM public.knots WHERE id = :id
-        ');
-        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+            SELECT COUNT(*) FROM public.knots');
+
         $stmt->execute();
 
-        $knot = $stmt->fetch(PDO::FETCH_ASSOC);
+        $max_pages = $stmt->fetchColumn();
 
-        if ($knot == false) {
+        if ($max_pages == false) {
             return null;
         }
 
-        return new Knot(
-            $knot['name'],
-            $knot['text'],
-            $knot['image']
-        );
+        return $max_pages;
+
     }
 
 
@@ -55,6 +54,27 @@ class KnotsRepository extends Repository
             $knot['text'],
             $knot['image']
         );
+
+    }
+
+    public function getKnotsJs(int $page = null)
+    {
+
+
+        $stmt = $this->database->connect()->prepare('
+            SELECT * FROM public.knots LIMIT 1 OFFSET :page-1
+        ');
+
+
+
+        if($page) {
+            $stmt->bindParam(':page', $page, PDO::PARAM_INT);
+        }
+
+
+        $stmt->execute();
+
+       return $stmt->fetch(PDO::FETCH_ASSOC);
 
     }
 }
