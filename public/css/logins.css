@@ -1,3 +1,4 @@
+
 body {
     margin: 0;
 }
@@ -9,7 +10,7 @@ body {
     display: flex; /*rozmieszczenie elementów w wierszach lub kolumnach */
     flex-direction: row; /*rozmieszczenie wierszowe*/
     justify-content: center;
-    align-items: center; /*wysrodkowanie*/
+    align-items: center;
 
 
 }
@@ -68,7 +69,7 @@ form.login {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 64%;
+    width: 30vw;
     height: 40vh;
     background: rgb(230, 230, 230) 0% 0% no-repeat padding-box;
     box-shadow: 0px 3px 6px #00000029;
@@ -81,7 +82,7 @@ form.login {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    height: 40%;
+    height: 20vh;
 }
 
 input:focus, button:focus, a:focus{
@@ -111,6 +112,7 @@ a {
 
 button, .link {
 
+    text-decoration: none;
     font: normal normal normal 14px/18px Roboto;
     width: 32%;
     height: 55%;
@@ -140,15 +142,46 @@ input {
     align-self: center;
     height: 10%;
 }
+@media screen and (max-width: 1030px) and (min-width: 425px) {
+    body {
+        position: fixed;
+    }
+
+    .photo
+    {
+        width: 45%;
+    }
+
+    .login-container
+    {
+        width: 50%;
+        height: 50%;
+    }
+
+    form.login
+    {
+        height: 25vh;
+    }
+
+    input
+    {
+        height: 20%;
+    }
+}
 
 @media only screen and (max-device-width: 420px)
 {
+
+    body {
+        position: fixed;
+    }
+
     .photo {
         display: none;
     }
     .container {
         justify-content: center;
-        background-image: url("../img/login.svg");
+        background-image: url("../img/Rectangle 30.png");
         background-repeat: no-repeat;
         background-size: cover;
         margin: 0;
@@ -157,16 +190,15 @@ input {
     .login-container {
         height: 95%;
         display: grid;
-        grid-template-rows: 20% 5% 75%;
+        grid-template-rows: 10% 1% 89%;
         justify-content: space-evenly;
-        width: 90%;
         align-self: center;
     }
 
     .logo
     {
         margin-left: 6em;
-        width: 100%;
+        width: 80%;
         height: 100%;
     }
 
@@ -189,7 +221,7 @@ input {
         box-shadow: 0px 0px 0px 0px transparent;
         background-color: transparent;
         opacity: 0.9;
-
+        margin: 0;
     }
     .link
     {
@@ -200,6 +232,7 @@ input {
     }
 
     .buttons {
+        height: 30vh;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -213,23 +246,19 @@ input {
         border-radius: 0;
         height: 55%;
         color: #001335;
-        font: normal normal normal 40px/45px Roboto;
+        font: normal normal normal 57px/60px Roboto;
 
     }
 
     input {
-        width: 60vw;
+        width: 65vw;
         height: 10vw;
-        background: #FFFFFF 0% 0% no-repeat padding-box;
-        border-radius: 25px;
+        background: white 0% 0% no-repeat padding-box;
+        border-radius: 60px;
         font: normal normal normal 35px/45px Roboto;
         letter-spacing: 0px;
         color: #223B5F;
         opacity: 1;
-    }
-
-    .photo>img {
-        display: none;
     }
 
 

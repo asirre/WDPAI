@@ -5,7 +5,7 @@ body {
 .container {
     width: 100vw;
     height: 100vh;
-    display: grid; /*rozmieszczenie elementów w wierszach lub kolumnach */
+    display: grid;
     grid-template-columns: 5% 95%;
 
 }
@@ -23,9 +23,9 @@ body {
     color:#244066;
 }
 
-.button, .buttons {
+button {
 
-    font: italic normal bold 20px Roboto;
+    font: italic normal bold 17px Roboto;
     color: #244066;
     border: none;
     opacity: 1;
@@ -33,8 +33,12 @@ body {
     border: transparent;
     cursor: pointer;
     text-decoration: none;
+    outline: 0;
 
+}
 
+.menu{
+    font: italic normal bold 20px Roboto;
 }
 
 .blue-rectangle {
@@ -129,28 +133,48 @@ h1{
     opacity: 0.92;
 }
 
+@media screen and (max-width: 1030px) and (min-width: 425px) {
 
+    .main {
+        grid-template-rows: 100px repeat(2, 1fr);
+    }
+    .img1, .img2, .img3 {
+        width: 40%;
+    }
+    h1 {
+        font: italic normal bold 40px/50px Roboto;
+    }
+    .account {
+        margin-top: 0;
+        align-items: baseline;
+    }
+    button{
+        font: italic normal bold 25px Roboto;
+    }
+
+    .menu
+    {
+        font: italic normal bold 30px Roboto;
+    }
+
+
+}
 @media only screen and (max-device-width: 420px)
 {
     .container {
-        width: 100vw;
-        height: 100vh;
         display: flex;
-
     }
 
     .main {
 
         display: grid;
-        width: 100%;
-        height: 100%;
         grid-template-rows: 10% repeat(2, 1fr);
 
     }
 
     h1{
         margin: 0;
-        font: italic normal bold 80px/80px Roboto;
+        font: italic normal bold 60px/60px Roboto;
         color: #244066;
         opacity: 0.92;
         padding-bottom: 0.5em;
@@ -159,7 +183,13 @@ h1{
     .account{
 
         justify-content: flex-end;
-        margin-bottom: 0;
+        margin: 0;
+        padding: 2.5em ;
+        background: #FFFFFF 0 0 no-repeat padding-box;
+        box-shadow: 0;
+        border: 0 solid #70707080;
+        border-radius: 0;
+        opacity: 1;
     }
 
 
@@ -168,6 +198,7 @@ h1{
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
+        margin-bottom: 4em;
     }
 
     .repeated{
@@ -181,76 +212,61 @@ h1{
 
     }
 
-    .img1{
-
+    .img1, .img2, .img3 {
         width: 35vw;
         height: 35vh;
         border-radius: 10px;
-        background-image: url("../img/1.png");
         background-size: cover;
         background-repeat: no-repeat;
-
-
     }
+
+    .img1 {
+
+        background-image: url("../img/1.png");
+    }
+
     .img2{
 
-        width: 35vw;
-        height: 35vh;
-        border-radius: 10px;
         background-image: url("../img/2.png");
-        background-size: cover;
-        background-repeat: no-repeat;
-
     }
     .img3{
 
-        width: 35vw;
-        height: 35vh;
-        border-radius: 10px;
         background-image: url("../img/3.png");
-        background-size: cover;
-        background-repeat: no-repeat;
-
     }
 
-    .button {
 
+    #acc,#log_out
+    {
         font-size: 0;
-        background: #FFFFFF 0 0 no-repeat padding-box;
-        box-shadow: 0px;
-        border: 0 solid #70707080;
-        border-radius: 0;
-        opacity: 1;
-
     }
+
 
     .fas
     {
-        font-size: 65px;
+        font-size: 80px;
         color: #244066;
 
     }
 
 
-    .buttonm {
+    .menu {
 
         height: 5em;
-        width: 18em;
+        width: 13em;
         background: #FFFFFF 0 0 no-repeat padding-box;
         box-shadow: 0px 3px 6px #00000029;
         border: 1px solid #70707080;
         border-radius: 50px;
         opacity: 1;
         text-align: center;
-        font: normal normal medium 90px/110px Roboto;
-        padding-top: 1em;
+        font: normal normal bold 40px/50px Roboto;
         letter-spacing: 0;
         color: #033E6A;
         margin: 0;
     }
 
-    a {
-
+    button {
+        height: 100%;
     }
 
 

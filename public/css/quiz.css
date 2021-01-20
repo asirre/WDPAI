@@ -24,7 +24,6 @@ body {
 .test-end {
     display: grid;
     justify-content: flex-end;
-    margin-right: 2em;
 }
 
 #button-end {
@@ -41,8 +40,11 @@ body {
     letter-spacing: 0px;
     color: #244066;
     opacity: 0.92;
-    align-self: center;
     margin-left: 1.3em;
+    margin-right: 2.5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .question
@@ -69,9 +71,14 @@ img {
     opacity: 1;
 }
 
-h2 {
-    font: italic normal bold 24px/30px Roboto;
-    letter-spacing: 0px;
+h2{
+
+    font: italic normal normal 20px/26px Roboto;
+    color: #033E6A;
+}
+
+h3 {
+    font: italic normal bold 20px/26px Roboto;
     color: #033E6A;
 }
 
@@ -123,6 +130,53 @@ li.valid {
     outline: none;
 }
 
+@media screen and (max-width: 1030px) and (min-width: 425px) {
+
+    .container
+    {
+        grid-template-rows: 10% 15% 45% 15% 15%;
+    }
+
+    h2 {
+        font: italic normal normal 30px/6px Roboto;
+    }
+    .question
+    {
+        justify-content: space-around;
+
+    }
+    .img
+    {
+        width: 25em;
+        height: 20em;
+    }
+    img
+    {
+        height: 17em;
+        width: 20em;
+    }
+    .answers {
+        width: 50vw;
+    }
+    ol {
+        font: normal normal normal 20px/30px Roboto;
+    }
+    li{
+        width: 45vw;
+    }
+    .test-buttons {
+        align-items: flex-start;
+    }
+
+    #next_question {
+        font: italic normal normal 22px/30px Roboto;
+    }
+
+    .test-end {
+        align-items: flex-start;
+    }
+}
+
 
 
 @media only screen and (max-device-width: 420px)
@@ -154,6 +208,13 @@ li.valid {
         font-size: 65px;
         color: white;
 
+    }
+    h1 {
+        font: italic normal bold 55px/57px Roboto
+    }
+
+    h2 {
+        font: italic normal normal 45px/47px Roboto
     }
 
     .test-menu {
@@ -197,8 +258,8 @@ li.valid {
         width: 90%;
     }
 
-    h2 {
-        margin-bottom: 2em;
+
+    h3 {
         font: italic normal bold 50px/60px Roboto;
     }
 
@@ -221,7 +282,7 @@ li.valid {
     {
         margin-left: 2.5em;
         margin-right: 2.5em;
-        font: italic normal bold 35px/45px Roboto;
+        font: italic normal normal 45px/45px Roboto;
         letter-spacing: 0px;
         color: #FFFFFF;
         opacity: 0.87;

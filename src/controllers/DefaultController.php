@@ -10,31 +10,39 @@ class DefaultController extends AppController {
         $this->render('login');
     }
 
+
+    private function renderSecure($name){
+        Shared::checkSession();
+        $this->render($name);
+    }
+
     public function main() {
 
-        session_start();
-        Shared::checkSession();
-        $this->render('main');
+        $this->renderSecure('main');
+
     }
 
 
     public function boat() {
-        session_start();
-        Shared::checkSession();
-        $this->render('boat');
+
+        $this->renderSecure('boat');
     }
 
     public function naped() {
-        session_start();
-        Shared::checkSession();
-        $this->render('naped');
+
+        $this->renderSecure('naped');
     }
 
     public function kotwice() {
-        session_start();
-        Shared::checkSession();
-        $this->render('kotwice');
+
+        $this->renderSecure('kotwice');
     }
+
+    public function sails() {
+
+        $this->renderSecure('sails');
+    }
+
 
 
 

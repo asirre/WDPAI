@@ -8,6 +8,7 @@ $path = parse_url($path, PHP_URL_PATH);
 Routing::get('', 'DefaultController');
 Routing::get('main', 'DefaultController');
 Routing::get('boat', 'DefaultController');
+Routing::get('sails', 'DefaultController');
 Routing::get('naped', 'DefaultController');
 Routing::get('kotwice', 'DefaultController');
 Routing::get('knots', 'KnotsController');

@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <head>
     <link rel="stylesheet" type="text/css" href="public/css/knots.css">
-    <script type="text/javascript" src="./public/js/dynamicButtons.js" defer></script>
     <script type="text/javascript" src="./public/js/knots.js" defer></script>
     <title>MAIN</title>
 </head>
 <body>
     <div class="container">
-        <?php session_start(); ?>
         <? include("menu.php") ?>
         <div class="knots">
             <div class="name">

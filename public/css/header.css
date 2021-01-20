@@ -1,3 +1,4 @@
+
 .menu {
 
     background: #3C5576 0% 0% no-repeat padding-box;
@@ -31,8 +32,21 @@ button {
 
 }
 
+@media screen and (max-width: 1030px) and (min-width: 425px) {
+
+    button {
+        font: normal normal normal 25px/27px Roboto;
+    }
+    h1 {
+        font: italic normal bold 45px/47px Roboto;
+    }
+}
+
+
 @media only screen and (max-device-width: 420px)
 {
+
+
     .back-to-main{
         margin-left: 1.3em;
     }
@@ -41,12 +55,22 @@ button {
         font-size: 0;
 
     }
+
     button:focus {
         outline: none;
     }
     .fas{
-        font-size: 65px;
+        font-size: 75px;
         color: white;
+
+    }
+
+    .account {
+
+        display: flex;
+        justify-content: space-around;
+        width: 30%;
+        opacity: 0.92;
 
     }
 

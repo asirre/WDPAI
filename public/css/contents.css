@@ -1,4 +1,9 @@
+html {
+    min-height: 100%;
+    margin: 0;
+}
 body {
+    min-height: 100%;
     margin: 0;
 }
 
@@ -9,7 +14,6 @@ body {
     grid-template-rows: 10% 15% 10% 65%;
 
 }
-
 
 .budowa{
     font: italic normal bold 15px/27px Roboto;
@@ -40,40 +44,47 @@ body {
 }
 
 
-
-
-
 ol li {
     cursor: pointer;
 }
 
 ol li:hover {
-    background: #ddd;
+    background: transparent;
+}
+
+li {
+    margin-top: 1em;
 }
 
 
+li, .link{
 
-li {
-
+    margin-right: 0;
+    opacity: 1;
     font: italic normal normal 20px/28px Roboto;
-    margin-top: 1em;
     letter-spacing: 0px;
     color: #033E6A;
     text-shadow: 0px 3px 6px #00000029;
 
 }
+@media screen and (max-width: 1030px) and (min-width: 425px) {
+    h1 {
+        font: italic normal bold 45px/47px Roboto;
+    }
 
+    .spis {
+        font: italic normal normal 25px/30px Roboto;
+    }
 
-a {
-    text-decoration: none;
+    li, .link {
+        font: italic normal normal 28px/35px Roboto;
+    }
 }
-
 @media only screen and (max-device-width: 420px)
 {
 
     .container {
-        width: 100vw;
-        height: 100vh;
+
         display: grid;
         grid-template-rows: 10% 15% 10% 65%;
 
@@ -87,38 +98,6 @@ a {
 
     }
 
-
-    .menu {
-
-        background:#FFFFFF 0% 0% no-repeat padding-box;
-        box-shadow: 0px 0px 0px #FFFFFF;
-        border: 0px solid #FFFFFF;
-        border-radius: 0px;
-    }
-
-    .back-to-main {
-        display: flex;
-        align-items: center;
-        height: 80%;
-    }
-
-    .account {
-
-        display: flex;
-        justify-content: space-between;
-        width: 30%;
-        opacity: 0.92;
-
-    }
-    .button {
-        font-size: 0;
-    }
-
-    .fas{
-        font-size: 95px;
-        color: #8F9090;
-
-    }
 
     .budowa {
         display: flex;
@@ -147,12 +126,17 @@ a {
     ol {
         margin-left: 1em;
     }
-    li {
-        margin-top: 1em;
-        font: italic normal bold 55px/65px Roboto;
+
+    li, .link{
+
+        font: italic normal normal 55px/65px Roboto;
         color: #244066;
         opacity: 0.92;
 
+    }
+    li
+    {
+        margin-top: 1.7em;
     }
 
     h2 {

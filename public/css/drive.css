@@ -40,32 +40,31 @@ body {
     padding-top: 3em;
 
 }
-.img_zaglowe{
+.img_zaglowe, .img_motorowe, .img_mot-zagl{
     width: 10%;
     height: 80%;
-    background-image: url("../img/zaglowka.png");
     background-repeat: no-repeat;
     background-size: contain;
+}
+
+.img_zaglowe {
+    background-image: url("../img/zaglowka.png");
 }
 
 .img_motorowe{
-    width: 10%;
-    height: 80%;
+
     background-image: url("../img/motor.png");
-    background-repeat: no-repeat;
-    background-size: contain;
+
 }
 .img_mot-zagl{
-    width: 10%;
-    height: 80%;
+
     background-image: url("../img/motorzagiel.png");
-    background-repeat: no-repeat;
-    background-size: contain;
+
 }
 
 p{
-    width: 70%;
-    font: normal normal normal 20px/30px Roboto;
+    width: 50%;
+    font: normal normal normal 15px/30px Roboto;
     color: #244066;
 
 }
@@ -84,57 +83,44 @@ p{
     border: 0px solid transparent;
     margin-right: 2em;
 }
+@media screen and (max-width: 1030px) and (min-width: 425px) {
 
-a {
-    text-decoration: none;
+    h1 {
+        font: italic normal bold 45px/47px Roboto;
+    }
+
+    .img_zaglowe, .img_mot-zagl, .img_motorowe {
+        width: 16vw;
+        height: 12vh;
+    }
+    p{
+        width: 55vw;
+        font: normal normal normal 22px/30px Roboto;
+    }
+
+    .button_back
+    {
+        font: italic normal normal 22px/30px Roboto;
+    }
 }
+
+
 @media only screen and (max-device-width: 420px)
 {
 
     .container {
-        width: 96vw;
+        width: 100vw;
         height: 100vh;
         display: grid;
-        padding: 2em 2em 2em 2em;
+        padding: 0em 0em 0em 0em;
         grid-template-rows: 10% 10% 80%;
     }
 
-    .menu {
 
-        background:#FFFFFF 0% 0% no-repeat padding-box;
-        box-shadow: 0px 0px 0px #FFFFFF;
-        border: 0px solid #FFFFFF;
-        border-radius: 0px;
-    }
-
-    .back-to-main {
-        display: flex;
-        align-items: center;
-        height: 80%;
-    }
-
-    .account {
-
-        display: flex;
-        justify-content: space-between;
-        width: 30%;
-        opacity: 0.92;
-
-    }
-    .button {
-        font-size: 0;
-    }
-
-    .fas{
-        font-size: 95px;
-        color: #8F9090;
-
-    }
 
     .budowa {
         font: italic normal bold 30px/40px Roboto;
-        letter-spacing: 0px;
-        margin-left: 0;
+        margin-left: 1em;
     }
 
     .repeated, .repeated_s
@@ -165,7 +151,7 @@ a {
     }
 
     .button_back {
-        font: italic normal bold 25px/34px Roboto;
+        font: italic normal bold 29px/34px Roboto;
 
     }
 

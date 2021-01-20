@@ -56,28 +56,52 @@ p {
     opacity: 1;
 }
 
-.knots_buttons {
-
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-button {
-
+.next
+{
     font: italic normal normal 18px/24px Roboto;
     letter-spacing: 0px;
     color: #4B6280;
     opacity: 0.87;
     background-color: transparent;
     border: 0px solid transparent;
-
 }
+
+.knots_buttons {
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
 
 a {
     text-decoration: none;
     font: italic normal bold 18px/24px Roboto;
     letter-spacing: 0px;
     color: #4B6280;
+}
+
+@media screen and (max-width: 1030px) and (min-width: 425px) {
+    h1 {
+        font: italic normal bold 45px/47px Roboto;
+    }
+    img {
+        height: 20em;
+        width: 25em;
+    }
+    p {
+        height: 10em;
+        width: 32em;
+        font: italic normal bold 25px/30px Roboto;
+    }
+    .knots_buttons{
+        align-items: flex-start;
+
+    }
+
+    .next {
+        font: italic normal normal 22px/30px Roboto;
+    }
 }
 
 @media only screen and (max-device-width: 420px)
@@ -87,42 +111,19 @@ a {
         width: 100vw;
         height: 100vh;
         display: grid; /*rozmieszczenie elementów w wierszach lub kolumnach */
-        grid-template-rows: 10% 12% 70% 8%;
+        grid-template-rows: 10% 82% 8%;
 
     }
 
-    .menu {
+    .knots {
 
-        background:#FFFFFF 0% 0% no-repeat padding-box;
-        box-shadow: 0px 0px 0px #FFFFFF;
-        border: 0px solid #FFFFFF;
-        border-radius: 0px;
-    }
-
-    .account {
-        display: flex;
-        justify-content: space-evenly;
-        width: 27%;
-
-    }
-
-
-    .button {
-        font-size: 0;
-    }
-
-    .fas
-    {
-        font-size: 65px;
-        color: #3C5576;
-
+        grid-template-rows: 15% 85%;
     }
 
     .name {
-        align-self: start;
+        align-self: center;
         font: italic normal bold 35px/45px Roboto;
         letter-spacing: 0px;
-        margin-left: 2em;
     }
 
     .img {
@@ -156,12 +157,6 @@ a {
 
     }
 
-    a
-    {
-        color: white;
-        font: italic normal normal 38px/44px Roboto;
-    }
-
 
     button {
         margin-left: 2.5em;
@@ -171,6 +166,12 @@ a {
         color: #FFFFFF;
         opacity: 0.87;
     }
+
+    .next
+    {
+        font: italic normal normal 45px/45px Roboto;
+    }
+
 
 
 

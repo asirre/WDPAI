@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <head>
-    <link rel="stylesheet" type="text/css" href="public/css/kotwice.css">
+    <link rel="stylesheet" type="text/css" href="public/css/anchor.css">
     <script type="text/javascript" src="./public/js/info.js" defer></script>
-    <script type="text/javascript" src="./public/js/dynamicButtons.js" defer></script>
     <title>BOAT</title>
 </head>
 <body>
@@ -55,7 +54,7 @@
 
     </div>
     <div class="back">
-        <a href="boat" class="button_back">wróć do spisu treści</a>
+        <button class="button_back" id="boat">wróć do spisu treści</button>
     </div>
 
 </div>

@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <head>
-    <link rel="stylesheet" type="text/css" href="public/css/naped.css">
-    <script type="text/javascript" src="./public/js/dynamicButtons.js" defer></script>
-
+    <link rel="stylesheet" type="text/css" href="public/css/drive.css">
     <title>BOAT</title>
 </head>
 <body>
@@ -32,7 +30,7 @@
             duże nadbudówki oraz mniejszą powierzchnię żagli.</p>
         </div>
         <div class="back">
-            <a href="boat" class="button_back">wróć do spisu treści</a>
+            <button class="button_back" id="boat">wróć do spisu treści</button>
         </div>
     </div>
 

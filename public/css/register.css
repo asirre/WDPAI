@@ -67,7 +67,7 @@ form.register {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 64%;
+    width: 30vw;
     height: 40vh;
     background: rgb(230, 230, 230) 0% 0% no-repeat padding-box;
     box-shadow: 0px 3px 6px #00000029;
@@ -80,7 +80,7 @@ form.register {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    height: 60%;
+    height: 25vh;
 }
 
 .button
@@ -107,7 +107,7 @@ button {
 
 input {
 
-    margin-top: 0%;
+    margin-top: 0;
     width: 75%;
     height: 20%;
     background: #FFFFFF 0% 0% no-repeat padding-box;
@@ -129,19 +129,56 @@ input:focus {
 
 .no-valid {
     border: 3px solid red;
-    border-radius: 1em;
+    border-radius: 1.5em;
     box-shadow: 0 0 0.2em red;
     outline: none;
 }
 
+@media screen and (max-width: 1030px) and (min-width: 425px) {
+    body {
+        position: fixed;
+    }
+
+    .photo
+    {
+        width: 45%;
+    }
+
+    .login-container
+    {
+        width: 50%;
+        height: 50%;
+    }
+    button
+    {
+        width: 40%;
+    }
+
+
+    form.register
+    {
+        height: 70%;
+    }
+
+    input
+    {
+        height: 15%;
+    }
+}
+
 @media only screen and (max-device-width: 420px)
 {
+    body {
+        position: fixed;
+    }
+
     .photo {
         display: none;
     }
+
     .container {
         justify-content: center;
-        background-image: url("../img/login.svg");
+        background-image: url("../img/Rectangle 30.png");
         background-repeat: no-repeat;
         background-size: cover;
         margin: 0;
@@ -149,24 +186,23 @@ input:focus {
 
     .login-container {
         height: 95%;
-        display: grid;
-        grid-template-rows: 20% 5% 75%;
-        justify-content: space-evenly;
         width: 90%;
+        display: grid;
+        grid-template-rows: 10% 1% 89%;
+        justify-content: space-evenly;
         align-self: center;
     }
 
     .logo
     {
         margin-left: 6em;
-        width: 100%;
+        width: 80%;
         height: 100%;
     }
 
     h1{
         display: none;
     }
-
 
     form
     {
@@ -181,25 +217,25 @@ input:focus {
         height: 60vh;
         box-shadow: 0px 0px 0px 0px transparent;
         background-color: transparent;
-        opacity: 0.9;
+        opacity: 0.95;
+        margin: 0;
 
     }
-
     .inputs
     {
         height: 100%;
-        background-color: transparent;
     }
+
     button {
 
-        background:0;
         background-color: transparent;
         box-shadow: 0px 0px 0px 0px transparent;
         border: 0;
         border-radius: 0;
-        height: 55%;
+        height: 100%;
         color: #001335;
-        font: normal normal normal 40px/45px Roboto;
+        font: normal normal normal 57px/60px Roboto;
+        width: 60%;
 
     }
 
@@ -207,15 +243,10 @@ input:focus {
         width: 60vw;
         height: 10vw;
         background: #FFFFFF 0% 0% no-repeat padding-box;
-        border-radius: 25px;
         font: normal normal normal 35px/45px Roboto;
-        letter-spacing: 0px;
+        border-radius: 60px;
         color: #223B5F;
         opacity: 1;
-    }
-
-    .photo>img {
-        display: none;
     }
 
 

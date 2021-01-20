@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <head>
     <link rel="stylesheet" type="text/css" href="public/css/logins.css">
-    <script type="text/javascript" src="./public/js/dynamicButtons.js" defer></script>
     <title>LOGIN PAGE</title>
 </head>
 <body>
@@ -24,8 +23,8 @@
                 ?>
             </div>
             <div class="inputs">
-            <input name="email" type="text" placeholder="email@email.com" required>
-            <input name="password" type="password" placeholder="password" required>
+            <input name="email" type="text" placeholder=" email@email.com" required>
+            <input name="password" type="password" placeholder=" password" required>
             </div>
             <div class="buttons">
             <button>zaloguj się</button>

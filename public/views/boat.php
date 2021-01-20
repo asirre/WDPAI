@@ -1,10 +1,6 @@
 <!DOCTYPE html>
-<?php
-session_start();
-?>
 <head>
-    <link rel="stylesheet" type="text/css" href="public/css/boats.css">
-    <script type="text/javascript" src="./public/js/dynamicButtons.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="public/css/contents.css">
 
     <title>BOAT</title>
 </head>
@@ -19,13 +15,13 @@ session_start();
     </div>
     <div class="tresc">
             <ol>
-                <li> <a href="naped" class="link">Kryterium głównego źródła napędu</a></li>
-                <li><a href="kotwice" class="link">Wyposażenie kotwiczne i cumownicze</li>
-                <li>Omasztowanie żaglu jachtowego</li>
-                <li>Ożaglowanie jachtu</li>
-                <li>Budowa kadłuba</li>
-                <li>Olinowanie jachtu</li>
-                <li>Kryterium osprzętu żaglowego</li>
+                <li> <button id="naped" class="link">Główne źródla napędu</button></li>
+                <li> <button id="kotwice" class="link">Wyposażenie kotwiczne</button></li>
+                <li> <button id="omasztowanie" class="link">Omasztowanie żaglu </button></li>
+                <li> <button id="ozaglowanie" class="link">Ożaglowanie jachtu</button></li>
+                <li> <button id="kadlub" class="link">Budowa kadłuba</button></li>
+                <li> <button id="olinowanie" class="link">Olinowanie jachtu</button></li>
+                <li> <button id="osprzet" class="link">Kryterium osprzętu żaglowego</button></li>
 
 
             </ol>

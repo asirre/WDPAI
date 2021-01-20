@@ -10,10 +10,11 @@ if (exit != null) {
 let a = document.getElementById('true');
 let b = document.getElementById('false');
 
-
 if (a != null) {
+
     a.addEventListener('click', function () {
         a.classList.add('valid');
+
     });
 }
 

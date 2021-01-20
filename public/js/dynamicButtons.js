@@ -1,8 +1,30 @@
 
 let main = document.getElementById('nav');
+
 if (main != null) {
     main.addEventListener('click', function () {
         document.location.href = 'main';
+    });
+}
+
+let sails = document.getElementById('osprzet');
+
+if (sails != null) {
+    sails.addEventListener('click', function () {
+        document.location.href = 'sails';
+    });
+}
+
+let naped = document.getElementById('naped');
+if (naped != null) {
+    naped.addEventListener('click', function () {
+        document.location.href = 'naped';
+    });
+}
+let kotwice = document.getElementById('kotwice');
+if (kotwice != null) {
+    kotwice.addEventListener('click', function () {
+        document.location.href = 'kotwice';
     });
 }
 

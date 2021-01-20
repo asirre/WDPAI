@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <head>
-    <link rel="stylesheet" type="text/css" href="public/css/tests.css">
-    <script type="text/javascript" src="./public/js/dynamicButtons.js" defer></script>
-    <script type="text/javascript" src="./public/js/tests.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="public/css/quiz.css">
+    <script type="text/javascript" src="./public/js/test.js" defer></script>
 
     <title>MAIN</title>
 </head>
@@ -12,16 +11,14 @@
 
     <div class="test-menu">
         <h1>Test</h1>
-        <h2>Pytanie <?= $page ?>/<?= $max_pages ?></h2>
-        <h3>Punkty <?= $_SESSION['email'] ?>/<?= $max_pages ?></h3>
+        <h2>pytanie <?= $page ?>/<?= $max_pages ?></h2>
     </div>
     <div class="question">
         <div class="img">
             <img src="public/img/<?= $question->getImage(); ?>">
         </div>
         <div class="answers">
-
-            <h2><?= $question->getQuestion(); ?></h2>
+            <h3><?= $question->getQuestion(); ?></h3>
             <ol>
                 <li id="<?=json_encode($answers[0]->getIsCorrect())?>" >
                     <?= $answers[0]->getAnswer(); ?> </li>

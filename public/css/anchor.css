@@ -136,39 +136,45 @@ body {
     from {opacity: 0;}
     to {opacity:1 ;}
 }
+
+@media screen and (max-width: 1030px) and (min-width: 425px) {
+
+    h1 {
+        font: italic normal bold 45px/47px Roboto;
+    }
+
+    .button_back {
+        font: italic normal normal 22px/30px Roboto;
+    }
+    .img_admiralicji,.img_brucea,.img_czterolap,.img_plugowa,.img_danfortha {
+        height: 20vh;
+        width: 30vw;
+        margin-left: 5em;
+    }
+
+    .popuptext.show {
+        height: 28vh;
+        width: 33vw;
+        font-size: 30px;
+        bottom: 70%;
+
+
+    }
+    #text {
+        font-size: 30px;
+    }
+}
 @media only screen and (max-device-width: 420px)
 {
 
     .container {
-        width: 96vw;
+        width: 100vw;
         height: 100vh;
         display: grid;
-        padding: 2em 2em 2em 2em;
+        padding: 0em 0em 0em 0em;
         grid-template-rows: 10% 10% 70% 10%;
     }
 
-    .menu {
-
-        background:#FFFFFF 0% 0% no-repeat padding-box;
-        box-shadow: 0px 0px 0px #FFFFFF;
-        border: 0px solid #FFFFFF;
-        border-radius: 0px;
-    }
-
-    .back-to-main {
-        display: flex;
-        align-items: center;
-        height: 80%;
-    }
-
-    .account {
-
-        display: flex;
-        justify-content: space-between;
-        width: 30%;
-        opacity: 0.92;
-
-    }
 
     .tresc
     {
@@ -190,31 +196,20 @@ body {
         margin-left: -250px;
     }
 
-    .button {
-        font-size: 0;
-    }
-
-    .fas{
-        font-size: 95px;
-        color: #8F9090;
-
-    }
 
     .budowa {
         font: italic normal bold 30px/40px Roboto;
-        letter-spacing: 0px;
-        margin-left: 0;
+        margin-left: 1em;
     }
 
 
     .back {
-
         align-items:center;
 
     }
 
     .button_back {
-        font: italic normal bold 25px/34px Roboto;
+        font: italic normal bold 29px/34px Roboto;
 
     }
 

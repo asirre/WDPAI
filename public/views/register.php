@@ -25,11 +25,11 @@
                 ?>
             </div>
             <div class="inputs">
-                <input name="email" type="text" placeholder="email@email.com" required>
-                <input name="password" type="password" placeholder="password" required>
-                <input name="confirmedPassword" type="password" placeholder="confirm password" required>
-                <input name="name" type="text" placeholder="name" required>
-                <input name="surname" type="text" placeholder="surname" required>
+                <input name="email" type="text" placeholder=" email@email.com" required>
+                <input name="password" type="password" placeholder=" password" required>
+                <input name="confirmedPassword" type="password" placeholder=" confirm password" required>
+                <input name="name" type="text" placeholder=" name" required>
+                <input name="surname" type="text" placeholder=" surname" required>
             </div>
             <div class="button">
                 <button type="submit">zarejestruj się</button>

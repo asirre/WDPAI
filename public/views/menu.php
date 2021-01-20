@@ -1,6 +1,7 @@
 <head>
     <script src="https://kit.fontawesome.com/fffd297577.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="public/css/header.css">
+    <script type="text/javascript" src="./public/js/dynamicButtons.js" defer></script>
 </head>
 
 <div class="menu">
