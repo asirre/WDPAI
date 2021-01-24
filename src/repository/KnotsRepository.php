@@ -8,7 +8,6 @@ class KnotsRepository extends Repository
     public function getPages(): ?int
     {
 
-
         $stmt = $this->database->connect()->prepare('
             SELECT COUNT(*) FROM public.knots');
 
@@ -25,19 +24,15 @@ class KnotsRepository extends Repository
     }
 
 
-    public function getKnots(int $page = null, int $pageSize = 6): ?Knot
+    public function getKnots(int $page = null): ?Knot
     {
-
 
         $stmt = $this->database->connect()->prepare('
             SELECT * FROM public.knots LIMIT 1 OFFSET :page-1
         ');
 
-
-
         if($page) {
             $stmt->bindParam(':page', $page, PDO::PARAM_INT);
-            //$stmt->bindParam(':page_size', $pageSize, PDO::PARAM_INT);
         }
 
 
@@ -46,7 +41,11 @@ class KnotsRepository extends Repository
         $knot = $stmt->fetch(PDO::FETCH_ASSOC);
 
         if ($knot == false) {
-            return null;
+            return new Knot(
+                $knot[''],
+                $knot[''],
+                $knot['']
+            );
         }
 
         return new Knot(
@@ -57,25 +56,5 @@ class KnotsRepository extends Repository
 
     }
 
-    public function getKnotsJs(int $page = null)
-    {
-
-
-        $stmt = $this->database->connect()->prepare('
-            SELECT * FROM public.knots LIMIT 1 OFFSET :page-1
-        ');
-
-
-
-        if($page) {
-            $stmt->bindParam(':page', $page, PDO::PARAM_INT);
-        }
-
-
-        $stmt->execute();
-
-       return $stmt->fetch(PDO::FETCH_ASSOC);
-
-    }
 }
 

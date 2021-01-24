@@ -18,6 +18,19 @@ class TestController extends AppController
 
     }
 
+    public function checkAnswer()
+    {
+        session_start();
+        $json = file_get_contents('php://input');
+        $data = json_decode($json, true);
+        $correct_answ_id = $this->testRepository->getCorrectAnswId($data);
+        if((int)$data["id"]===$correct_answ_id)
+        {
+            $_SESSION['points']= $_SESSION['points']+1;
+        }
+
+        echo json_encode($correct_answ_id);
+    }
 
     public function test()
     {

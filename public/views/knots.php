@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <head>
     <link rel="stylesheet" type="text/css" href="public/css/knots.css">
-    <script type="text/javascript" src="./public/js/knots.js" defer></script>
     <title>MAIN</title>
 </head>
 <body>
@@ -22,29 +21,13 @@
         </div>
         <div class="knots_buttons">
             <?php if($page > 1) : ?>
-                <a href="/knots?page=<?= $page - 1; ?>" class="prev" >poprzedni węzeł</a>
+                <button class="prev" onclick="knotsButtons(<?=$page-1?>)">poprzedni węzeł</button>
             <?php endif; ?>
-
-            <button class="next" onclick="fun(<?=$page+1?>)">następny węzeł</button>
-
+            <?php if($page < $max_pages):?>
+            <button class="next" onclick="knotsButtons(<?=$page+1?>)">następny węzeł</button>
+            <?php endif; ?>
         </div>
-
-
-
-          </div>
+        </div>
     </div>
 </body>
 
-<template id = "knots-template">
-    <div class="knots">
-        <div class="name">
-            <h1>title</h1>
-        </div>
-        <div class="info">
-            <div class="img">
-                <img src="">
-            </div>
-            <p>description</p>
-        </div>
-    </div>
-</template>

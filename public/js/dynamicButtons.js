@@ -49,3 +49,22 @@ if (test != null) {
     });
 }
 
+let next = document.getElementById('test');
+if (test != null) {
+    test.addEventListener('click', function () {
+        document.location.href = 'test?page=1';
+    });
+}
+
+let logout = document.querySelector('.logout');
+if (logout != null) {
+    logout.addEventListener('click', function () {
+        document.location.href = 'login';
+    });
+}
+
+function knotsButtons(page) {
+
+    document.location.href = 'knots?page='+page;
+
+}

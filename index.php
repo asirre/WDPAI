@@ -14,6 +14,7 @@ Routing::get('kotwice', 'DefaultController');
 Routing::get('knots', 'KnotsController');
 Routing::get('test', 'TestController');
 Routing::post('register', 'SecurityController');
+Routing::post('checkAnswer', 'TestController');
 Routing::post('login', 'SecurityController');
 Routing::post('search', 'KnotsController');
 Routing::run($path) ;

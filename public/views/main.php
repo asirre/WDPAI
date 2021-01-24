@@ -10,7 +10,8 @@
     <div class="blue-rectangle">
     </div>
     <div class="main">
-        <?php $name = $_SESSION['name']?>
+        <?php $name = $_SESSION['name']; $_SESSION['points']=0?>
+
         <div class="logo">
             <h1>Witaj <?= $name ?> !</h1>
 

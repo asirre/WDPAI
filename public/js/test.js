@@ -3,29 +3,60 @@ let exit = document.getElementById('button-end');
 
 if (exit != null) {
     exit.addEventListener('click', function () {
-        document.location.href = 'main';
+        if(confirm("Czy na pewno chcesz zakończyć test?")===true) {
+            document.location.href = 'main';
+        }
     });
 }
 
-let a = document.getElementById('true');
-let b = document.getElementById('false');
+const answersDiv = document.querySelector('.answers');
+answersDiv.addEventListener('click',event => {
+    if(event.target.classList.contains('answer'))
+    {
+        fetchFun(event.target.id);
+    }
 
-if (a != null) {
+});
 
-    a.addEventListener('click', function () {
-        a.classList.add('valid');
 
-    });
+function fetchFun(id)
+{
+    const data = {
+        id:id
+    };
+
+    fetch(
+     "http://localhost:8080/checkAnswer",
+     {
+         method: "POST",
+         headers: {
+             'Content-Type': 'application/json'
+         },
+         body: JSON.stringify(data)
+        })
+        .then(response => {
+             return response.text();
+            })
+        .then(answers => {
+            highlightAnswers(answers,data);
+        })
+
 }
 
-if (b != null) {
-    b.addEventListener('click', function () {
+function highlightAnswers(answers,data)
+{
+    console.log(answers);
+    let a = document.getElementById(answers.toString());
+
+    if(answers!==data["id"])
+    {
+        let b = document.getElementById(data["id"]);
         b.classList.add('no-valid');
-        a.classList.add('valid');
+    }
+    a.classList.add('valid');
 
-    });
+
 }
-
 
 
 let next = document.getElementById('next_question');
@@ -40,16 +71,5 @@ function nextQuestion(page) {
 
 }
 
-let previous = document.getElementById('previous_question');
-
-function previousQuestion(page) {
-
-    if (previous != null) {
-        previous.addEventListener('click', function () {
-            document.location.href = 'test?page='+page;
-        });
-    }
-
-}
 
 

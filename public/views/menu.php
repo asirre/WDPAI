@@ -10,6 +10,6 @@
     </div>
     <div class="account">
     <button class="konto"><i class="fas fa-user-circle icon-2x"></i>  twoje konto</button>
-    <button class="logout"><i class="fas fa-sign-out-alt icon-2x"></i>  wyloguj się</button>
+    <button id="log-out" class="logout"><i class="fas fa-sign-out-alt icon-2x"></i>  wyloguj się</button>
     </div>
 </div>

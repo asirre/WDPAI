@@ -11,7 +11,7 @@
 
     <div class="test-menu">
         <h1>Test</h1>
-        <h2>pytanie <?= $page ?>/<?= $max_pages ?></h2>
+        <h2>punkty <?= $_SESSION['points'] ?>/<?= $max_pages ?></h2>
     </div>
     <div class="question">
         <div class="img">
@@ -20,23 +20,21 @@
         <div class="answers">
             <h3><?= $question->getQuestion(); ?></h3>
             <ol>
-                <li id="<?=json_encode($answers[0]->getIsCorrect())?>" >
+                <li class ="answer" id="<?=$answers[0]->getId()?>" >
                     <?= $answers[0]->getAnswer(); ?> </li>
-                <li id="<?=json_encode($answers[1]->getIsCorrect())?>">
+
+                <li class ="answer" id="<?=$answers[1]->getId()?>">
                     <?= $answers[1]->getAnswer();  ?> </li>
-                <li id="<?=json_encode($answers[2]->getIsCorrect())?>" >
+
+                <li class ="answer" id="<?=$answers[2]->getId()?>" >
                     <?= $answers[2]->getAnswer(); ?></li>
             </ol>
         </div>
     </div>
     <div class="test-buttons">
-        <?php if($page > 1) : ?>
-            <button id="previous_question" onclick="previousQuestion(<?=json_encode($page - 1)?>)">poprzednie pytanie</button>
-        <?php endif; ?>
         <?php if($page < $max_pages) : ?>
         <button id="next_question" onclick="nextQuestion(<?=json_encode($page +1)?>)">następne pytanie</button>
         <?php endif; ?>
-
     </div>
     <div class="test-end">
         <button id="button-end">zakończ test</button>

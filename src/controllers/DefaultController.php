@@ -10,7 +10,6 @@ class DefaultController extends AppController {
         $this->render('login');
     }
 
-
     private function renderSecure($name){
         Shared::checkSession();
         $this->render($name);
@@ -28,14 +27,14 @@ class DefaultController extends AppController {
         $this->renderSecure('boat');
     }
 
-    public function naped() {
+    public function drive() {
 
-        $this->renderSecure('naped');
+        $this->renderSecure('drive');
     }
 
-    public function kotwice() {
+    public function anchor() {
 
-        $this->renderSecure('kotwice');
+        $this->renderSecure('anchor');
     }
 
     public function sails() {
