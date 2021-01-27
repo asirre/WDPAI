@@ -15,15 +15,7 @@
             <h1>Twoje żeglarskie vademecum zawsze pod ręką</h1>
         </div>
         <form class="register" action="register" method="POST">
-            <div class="messages">
-                <?php
-                    if(isset($messages)) {
-                    foreach ($messages as $message) {
-                        echo $message;
-                    }
-                }
-                ?>
-            </div>
+            <? include("messages.php") ?>
             <div class="inputs">
                 <input name="email" type="text" placeholder=" email@email.com" required>
                 <input name="password" type="password" placeholder=" password" required>

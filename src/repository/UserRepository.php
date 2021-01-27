@@ -17,14 +17,17 @@ class UserRepository extends Repository
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
         if ($user == false) {
-            return null;
+            throw new UnexpectedValueException('User not found');
         }
+
 
         return new User(
             $user['email'],
             $user['password'],
             $user['name'],
-            $user['surname']
+            $user['surname'],
+            $user['role'],
+            $user['id']
         );
     }
 
@@ -36,7 +39,7 @@ class UserRepository extends Repository
         $statement->execute();
         $id = $statement->fetch(PDO::FETCH_ASSOC);
         if ($id == false) {
-            return null;
+            throw new UnexpectedValueException('Id not found');
         }
         return $id;
     }
@@ -91,28 +94,5 @@ class UserRepository extends Repository
         return $data['id'];
     }
 
-    public function updateUserDetails($id, $password, $email)
-    {
-        if ($password != null) {
-            $statement1 = $this->database->connect()->prepare('
-        UPDATE public.users SET  password = :password WHERE id = :id
-        ');
-            $statement1->bindParam(':password', $password, PDO::PARAM_STR);
-            $statement1->bindParam(':id', $id, PDO::PARAM_INT);
-            $statement1->execute();
-
-        }
-
-        $statement2 = $this->database->connect()->prepare('
-        UPDATE public.users SET email = :email WHERE id=:id
-        ');
-        $statement2->bindParam(':email', $email, PDO::PARAM_STR);
-        $statement2->bindParam(':id', $id, PDO::PARAM_INT);
-        $statement2->execute();
-
-
-
-
-    }
 
 }

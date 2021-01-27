@@ -2,7 +2,7 @@
 <head>
     <link rel="stylesheet" type="text/css" href="public/css/anchor.css">
     <script type="text/javascript" src="./public/js/info.js" defer></script>
-    <title>BOAT</title>
+    <title>ANCHOR</title>
 </head>
 <body>
 <div class="container">

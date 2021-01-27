@@ -6,10 +6,10 @@ body {
     width: 100vw;
     height: 100vh;
 
-    display: flex; /*rozmieszczenie elementów w wierszach lub kolumnach */
-    flex-direction: row; /*rozmieszczenie wierszowe*/
+    display: flex;
+    flex-direction: row;
     justify-content: center;
-    align-items: center; /*wysrodkowanie*/
+    align-items: center;
 
 
 }

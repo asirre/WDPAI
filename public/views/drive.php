@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
     <link rel="stylesheet" type="text/css" href="public/css/drive.css">
-    <title>BOAT</title>
+    <title>DRIVE</title>
 </head>
 <body>
 <div class="container">

@@ -4,7 +4,7 @@ let exit = document.getElementById('button-end');
 if (exit != null) {
     exit.addEventListener('click', function () {
         if(confirm("Czy na pewno chcesz zakończyć test?")===true) {
-            document.location.href = 'main';
+            document.location.href = 'testResults';
         }
     });
 }
@@ -45,7 +45,7 @@ function fetchFun(id)
 
 function highlightAnswers(answers,data)
 {
-    console.log(answers);
+
     let a = document.getElementById(answers.toString());
 
     if(answers!==data["id"])

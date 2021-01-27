@@ -20,7 +20,7 @@ class TestController extends AppController
 
     public function checkAnswer()
     {
-        session_start();
+        Shared::checkSession();
         $json = file_get_contents('php://input');
         $data = json_decode($json, true);
         $correct_answ_id = $this->testRepository->getCorrectAnswId($data);
@@ -30,6 +30,18 @@ class TestController extends AppController
         }
 
         echo json_encode($correct_answ_id);
+    }
+
+    public function testResults()
+    {
+        Shared::checkSession();
+        if ($this->isPost() && $_SESSION['points'] && $_SESSION['id']) {
+            $this->testRepository->saveResults($_SESSION['id'], $_SESSION['points']);
+            $_SESSION['points']=0;
+            return $this->render('test-results', ['messages' => ['Zapisano!']]);
+
+        }
+        return $this->render('test-results');
     }
 
     public function test()

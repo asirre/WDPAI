@@ -20,10 +20,7 @@ class SecurityController extends AppController {
         session_cache_expire(10);
         session_start();
         if (!$this->isPost()) {
-            session_start();
-            if (isset($_SESSION['id'])) {
-                session_destroy();
-            }
+            session_destroy();
             return $this->render('login');
         }
 
@@ -47,8 +44,8 @@ class SecurityController extends AppController {
         $_SESSION['email'] = $user->getEmail();
         $_SESSION['name'] = $user->getName();
         $_SESSION['surname'] = $user->getSurname();
-        $id = $this->userRepository->getId($user->getEmail());
-        $_SESSION['id'] = $id['id'];
+        $_SESSION['id'] = $user->getId();
+        $_SESSION['role'] = $user->getRole();
         $_SESSION['points'] = 0;
 
         $url = "http://$_SERVER[HTTP_HOST]";

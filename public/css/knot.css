@@ -18,7 +18,6 @@ body {
 }
 
 
-
 .name {
     font: italic normal bold 15px/27px Roboto;
     letter-spacing: 0px;
@@ -26,6 +25,8 @@ body {
     opacity: 0.92;
     align-self: center;
     margin-left: 1.5em;
+    display: flex;
+    justify-content: space-between;
 }
 
 .info
@@ -41,7 +42,7 @@ img{
 
     height: 13em;
     width: 17em;
-
+    border-radius: 20px;
     background-repeat: no-repeat;
     background-size: 100% 100%;
 
@@ -56,7 +57,7 @@ p {
     opacity: 1;
 }
 
-.next,.prev
+.next, .prev, #new_knot, .upload
 {
     font: italic normal normal 18px/24px Roboto;
     letter-spacing: 0px;
@@ -66,6 +67,8 @@ p {
     border: 0px solid transparent;
 }
 
+
+
 .knots_buttons {
 
     display: flex;
@@ -73,13 +76,6 @@ p {
     align-items: center;
 }
 
-
-a {
-    text-decoration: none;
-    font: italic normal bold 18px/24px Roboto;
-    letter-spacing: 0px;
-    color: #4B6280;
-}
 
 @media screen and (max-width: 1030px) and (min-width: 425px) {
     h1 {
@@ -99,7 +95,7 @@ a {
 
     }
 
-    .next {
+    .next.prev {
         font: italic normal normal 22px/30px Roboto;
     }
 }
@@ -167,7 +163,7 @@ a {
         opacity: 0.87;
     }
 
-    .next
+    .next,.prev
     {
         font: italic normal normal 45px/45px Roboto;
     }

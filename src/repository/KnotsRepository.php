@@ -41,11 +41,7 @@ class KnotsRepository extends Repository
         $knot = $stmt->fetch(PDO::FETCH_ASSOC);
 
         if ($knot == false) {
-            return new Knot(
-                $knot[''],
-                $knot[''],
-                $knot['']
-            );
+            throw new UnexpectedValueException('Knot not found');
         }
 
         return new Knot(
@@ -54,6 +50,21 @@ class KnotsRepository extends Repository
             $knot['image']
         );
 
+    }
+
+    public function addKnot(Knot $knot): void
+    {
+
+        $stmt = $this->database->connect()->prepare('
+            INSERT INTO knots (text, image, name)
+            VALUES (?, ?, ?)
+        ');
+
+        $stmt->execute([
+            $knot->getDescription(),
+            $knot->getImage(),
+            $knot->getName()
+        ]);
     }
 
 }

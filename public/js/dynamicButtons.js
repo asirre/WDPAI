@@ -15,16 +15,16 @@ if (sails != null) {
     });
 }
 
-let naped = document.getElementById('naped');
-if (naped != null) {
-    naped.addEventListener('click', function () {
-        document.location.href = 'naped';
+let drive= document.getElementById('naped');
+if (drive != null) {
+    drive.addEventListener('click', function () {
+        document.location.href = 'drive';
     });
 }
-let kotwice = document.getElementById('kotwice');
-if (kotwice != null) {
-    kotwice.addEventListener('click', function () {
-        document.location.href = 'kotwice';
+let anchor = document.getElementById('kotwice');
+if (anchor != null) {
+    anchor.addEventListener('click', function () {
+        document.location.href = 'anchor';
     });
 }
 
@@ -56,7 +56,7 @@ if (test != null) {
     });
 }
 
-let logout = document.querySelector('.logout');
+let logout = document.getElementById('log-out');
 if (logout != null) {
     logout.addEventListener('click', function () {
         document.location.href = 'login';
@@ -66,5 +66,11 @@ if (logout != null) {
 function knotsButtons(page) {
 
     document.location.href = 'knots?page='+page;
+}
 
+let upload = document.getElementById('new_knot');
+if (upload != null) {
+    upload.addEventListener('click', function () {
+        document.location.href = 'addKnot';
+    });
 }

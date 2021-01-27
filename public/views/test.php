@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <head>
-    <link rel="stylesheet" type="text/css" href="public/css/quiz.css">
-    <script type="text/javascript" src="./public/js/test.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="public/css/test.css">
+    <script type="text/javascript" src="./public/js/quiz.js" defer></script>
 
-    <title>MAIN</title>
+    <title>TEST</title>
 </head>
 <body>
 <div class="container">
-    <? include("menu.php") ?>
 
     <div class="test-menu">
         <h1>Test</h1>
-        <h2>punkty <?= $_SESSION['points'] ?>/<?= $max_pages ?></h2>
+        <h2>pytanie <?= $page?> /<?= $max_pages ?></h2>
+
     </div>
     <div class="question">
         <div class="img">

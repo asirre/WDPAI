@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
     <link rel="stylesheet" type="text/css" href="public/css/sail.css">
-    <title>BOAT</title>
+    <title>SAILS</title>
 </head>
 <body>
 <div class="container">

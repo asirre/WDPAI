@@ -61,11 +61,7 @@ class TestRepository extends Repository
         $question = $stmt->fetch(PDO::FETCH_ASSOC);
 
         if ($question == false) {
-            return new Question(
-                $question[''],
-                $question[''],
-                $question['']
-            );
+            throw new UnexpectedValueException('Question not found');
         }
 
         return new Question(
@@ -74,5 +70,43 @@ class TestRepository extends Repository
             $question['image']
         );
 
+    }
+
+    public function saveResults($id, $points): void
+    {
+        $time = new DateTime();
+        $stmt = $this->database->connect()->prepare('
+            INSERT INTO results (points,time)
+            VALUES (?, ?)
+        ');
+
+        $stmt->execute([
+            $points,
+            $time->format('Y-m-d')
+        ]);
+
+        $stmt = $this->database->connect()->prepare('
+            INSERT INTO test (users_id, results_id)
+            VALUES (?, ?)
+        ');
+
+        $stmt->execute([
+            $id,
+            $this->getResultsId($points,$time)
+        ]);
+    }
+
+    public function getResultsId($points, $time): int
+    {
+        $str_time = $time->format('Y-m-d');
+        $stmt = $this->database->connect()->prepare('
+            SELECT * FROM public.results WHERE points = :points AND time = :time');
+
+        $stmt->bindParam(':points', $points, PDO::PARAM_INT);
+        $stmt->bindParam(':time', $str_time, PDO::PARAM_STR);
+        $stmt->execute();
+
+        $data = $stmt->fetch(PDO::FETCH_ASSOC);
+        return $data['id'];
     }
 }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
-    <link rel="stylesheet" type="text/css" href="public/css/knots.css">
-    <title>MAIN</title>
+    <link rel="stylesheet" type="text/css" href="public/css/knot.css">
+    <title>KNOTS</title>
 </head>
 <body>
     <div class="container">
@@ -9,6 +9,10 @@
         <div class="knots">
             <div class="name">
               <h1><?= $knot->getName(); ?></h1>
+                <?php if($_SESSION['role']==='admin'): ?>
+                <button id="new_knot"> dodaj węzeł</button>
+                <?php endif; ?>
+
             </div>
               <div class="info">
                 <div class="img">

@@ -32,10 +32,11 @@ class DefaultController extends AppController {
         $this->renderSecure('drive');
     }
 
-    public function anchor() {
+    public function anchors() {
 
-        $this->renderSecure('anchor');
+        $this->renderSecure('anchors');
     }
+
 
     public function sails() {
 
