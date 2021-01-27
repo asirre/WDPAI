@@ -1,0 +1,217 @@
+body {
+    margin: 0;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 10% 15% 65% 10%;
+
+}
+
+.budowa{
+    font: italic normal bold 15px/27px Roboto;
+    letter-spacing: 0px;
+    color: #244066;
+    opacity: 0.92;
+    align-self: center;
+    margin-left: 3em;
+}
+
+.tresc
+{
+    display: grid;
+    width: 95%;
+    height: 95%;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    justify-items: center;
+}
+.popup
+{
+    height: 100%;
+}
+
+.img_admiralicji
+{
+    background-image: url("../img/Image 6.png");
+}
+.img_brucea
+{
+    background-image: url("../img/Image 8.png");
+}
+.img_czterolap
+{
+    background-image: url("../img/Image 10.png");
+}
+.img_plugowa
+{
+    background-image: url("../img/Image 9.png");
+}
+.img_danfortha
+{
+    background-image: url("../img/Image 7.png");
+}
+
+.opis
+{
+    font: normal normal normal 18px/28px Roboto;
+    color: #4B6280;
+
+}
+
+.img_admiralicji,.img_brucea,.img_czterolap,.img_plugowa,.img_danfortha
+{
+    height: 80%;
+    width: 40%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+}
+
+.back {
+    display: flex;
+    align-items:flex-start;
+    justify-content: flex-end;
+}
+.button_back {
+    font: italic normal bold 18px/24px Roboto;
+    letter-spacing: 0px;
+    color: #4B6280;
+    opacity: 0.87;
+    background-color: transparent;
+    border: 0px solid transparent;
+    margin-right: 2em;
+}
+
+
+.repeated {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ .popuptext {
+    visibility: hidden;
+    width: 20em;
+    background-color: #9A9DA0;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -150px;
+}
+
+.popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+}
+
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+
+@media screen and (max-width: 1030px) and (min-width: 425px) {
+
+    h1 {
+        font: italic normal bold 45px/47px Roboto;
+    }
+
+    .button_back {
+        font: italic normal normal 22px/30px Roboto;
+    }
+    .img_admiralicji,.img_brucea,.img_czterolap,.img_plugowa,.img_danfortha {
+        height: 20vh;
+        width: 30vw;
+        margin-left: 5em;
+    }
+
+    .popuptext.show {
+        height: 28vh;
+        width: 33vw;
+        font-size: 30px;
+        bottom: 70%;
+
+
+    }
+    #text {
+        font-size: 30px;
+    }
+}
+@media only screen and (max-device-width: 420px)
+{
+
+    .container {
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        padding: 0em 0em 0em 0em;
+        grid-template-rows: 10% 10% 70% 10%;
+    }
+
+
+    .tresc
+    {
+        width: 100%;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .img_admiralicji,.img_brucea,.img_czterolap,.img_plugowa,.img_danfortha {
+        height: 80%;
+        width: 80%;
+    }
+
+    .popuptext
+    {
+        width: 17em;
+        height: 10em;
+        font: normal normal normal 28px/34px Roboto;
+        margin-left: -250px;
+    }
+
+
+    .budowa {
+        font: italic normal bold 30px/40px Roboto;
+        margin-left: 1em;
+    }
+
+
+    .back {
+        align-items:center;
+
+    }
+
+    .button_back {
+        font: italic normal bold 29px/34px Roboto;
+
+    }
+
+
+}

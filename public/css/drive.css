@@ -1,0 +1,159 @@
+body {
+    margin: 0;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 10% 15% 75%;
+
+}
+
+
+.budowa{
+    font: italic normal bold 15px/27px Roboto;
+    letter-spacing: 0px;
+    color: #244066;
+    opacity: 0.92;
+    align-self: center;
+    margin-left: 3em;
+}
+
+.tresc {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-rows: repeat(3, 1fr) 10%;
+}
+
+.repeated {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.repeated_s {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 3em;
+
+}
+.img_zaglowe, .img_motorowe, .img_mot-zagl{
+    width: 10%;
+    height: 80%;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.img_zaglowe {
+    background-image: url("../img/zaglowka.png");
+}
+
+.img_motorowe{
+
+    background-image: url("../img/motor.png");
+
+}
+.img_mot-zagl{
+
+    background-image: url("../img/motorzagiel.png");
+
+}
+
+p{
+    width: 50%;
+    font: normal normal normal 15px/30px Roboto;
+    color: #244066;
+
+}
+
+.back {
+    display: flex;
+    align-items:flex-start;
+    justify-content: flex-end;
+}
+.button_back {
+    font: italic normal bold 18px/24px Roboto;
+    letter-spacing: 0px;
+    color: #4B6280;
+    opacity: 0.87;
+    background-color: transparent;
+    border: 0px solid transparent;
+    margin-right: 2em;
+}
+@media screen and (max-width: 1030px) and (min-width: 425px) {
+
+    h1 {
+        font: italic normal bold 45px/47px Roboto;
+    }
+
+    .img_zaglowe, .img_mot-zagl, .img_motorowe {
+        width: 16vw;
+        height: 12vh;
+    }
+    p{
+        width: 55vw;
+        font: normal normal normal 22px/30px Roboto;
+    }
+
+    .button_back
+    {
+        font: italic normal normal 22px/30px Roboto;
+    }
+}
+
+
+@media only screen and (max-device-width: 420px)
+{
+
+    .container {
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        padding: 0em 0em 0em 0em;
+        grid-template-rows: 10% 10% 80%;
+    }
+
+
+
+    .budowa {
+        font: italic normal bold 30px/40px Roboto;
+        margin-left: 1em;
+    }
+
+    .repeated, .repeated_s
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    .img_zaglowe,.img_motorowe,.img_mot-zagl{
+
+        height: 12vh;
+        width: 30vw;
+    }
+
+    p{
+        width: 90%;
+        font: normal normal normal 30px/40px Roboto;
+
+    }
+
+    .back {
+
+        align-items:center;
+
+    }
+
+    .button_back {
+        font: italic normal bold 29px/34px Roboto;
+
+    }
+
+
+}

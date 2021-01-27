@@ -1,0 +1,147 @@
+html {
+    min-height: 100%;
+    margin: 0;
+}
+body {
+    min-height: 100%;
+    margin: 0;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 10% 15% 10% 65%;
+
+}
+
+.budowa{
+    font: italic normal bold 15px/27px Roboto;
+    letter-spacing: 0px;
+    color: #244066;
+    opacity: 0.92;
+    align-self: center;
+    margin-left: 1.3em;
+}
+
+.spis
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: italic normal normal 20px/30px Roboto;
+    letter-spacing: 0px;
+    opacity: 0.92;
+    color: #033E6A;
+}
+
+
+.tresc
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+ol li {
+    cursor: pointer;
+}
+
+ol li:hover {
+    background: transparent;
+}
+
+li {
+    margin-top: 1em;
+}
+
+
+li, .link{
+
+    margin-right: 0;
+    opacity: 1;
+    font: italic normal normal 20px/28px Roboto;
+    letter-spacing: 0px;
+    color: #033E6A;
+    text-shadow: 0px 3px 6px #00000029;
+
+}
+@media screen and (max-width: 1030px) and (min-width: 425px) {
+    h1 {
+        font: italic normal bold 45px/47px Roboto;
+    }
+
+    .spis {
+        font: italic normal normal 25px/30px Roboto;
+    }
+
+    li, .link {
+        font: italic normal normal 28px/35px Roboto;
+    }
+}
+@media only screen and (max-device-width: 420px)
+{
+
+    .container {
+
+        display: grid;
+        grid-template-rows: 10% 15% 10% 65%;
+
+    }
+
+    .budowa {
+        padding-left: 1em;
+    }
+    .spis,.tresc {
+        padding: 0 2em 0 2em;
+
+    }
+
+
+    .budowa {
+        display: flex;
+        font: italic normal bold 35px/45px Roboto;
+        letter-spacing: 0px;
+        margin-left: 0;
+    }
+
+    .spis{
+
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-start;
+        color: #244066;
+        opacity: 0.92;
+
+    }
+
+
+    .tresc {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    ol {
+        margin-left: 1em;
+    }
+
+    li, .link{
+
+        font: italic normal normal 55px/65px Roboto;
+        color: #244066;
+        opacity: 0.92;
+
+    }
+    li
+    {
+        margin-top: 1.7em;
+    }
+
+    h2 {
+
+        font: italic normal bold 60px/70px Roboto;
+    }
+
+}

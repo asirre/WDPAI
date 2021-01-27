@@ -1,0 +1,291 @@
+body {
+    margin: 0;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 15% 50% 13% 12%;
+}
+
+.answers
+{
+    width: 45%;
+
+}
+
+.test-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.test-end {
+    display: grid;
+    justify-content: flex-end;
+}
+
+#button-end {
+
+    font: italic normal bold 22px/29px Roboto;
+    color: #244066;
+    text-shadow: 0px 3px 6px #00000029;
+    opacity: 0.92;
+
+}
+.test-menu {
+    font: italic normal bold 15px/27px Roboto;
+    color: #244066;
+    opacity: 0.92;
+    margin-left: 1.3em;
+    margin-right: 2.5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.question
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.img{
+    width: 30em;
+    height: 13em;
+    display: flex;
+    justify-content: flex-end;
+}
+img {
+
+    height: 13em;
+    width: 17em;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    box-shadow: 0px 7px 6px #00000029;
+    border-radius: 31px;
+    opacity: 1;
+}
+
+h2{
+
+    font: italic normal normal 20px/26px Roboto;
+    color: #033E6A;
+}
+
+h3 {
+    font: italic normal bold 20px/26px Roboto;
+    color: #033E6A;
+}
+
+ol li {
+    cursor: pointer;
+
+}
+
+li {
+
+    font: normal normal medium 44px/52px Roboto;
+    margin-top: 1em;
+    letter-spacing: 0px;
+    color: #033E6A;
+    text-shadow: 0px 3px 6px #00000029;
+    width: 60%;
+
+}
+
+.test-buttons {
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#next_question{
+
+    font: italic normal normal 19px/24px Roboto;
+    color: #4B6280;
+    opacity: 0.87;
+}
+
+
+li.no-valid {
+    border: 3px solid red;
+    box-shadow: 0 0 0.2em red;
+    outline: none;
+}
+
+li.valid {
+    border: 3px solid green;
+    box-shadow: 0 0 0.2em green;
+    outline: none;
+}
+
+button {
+    background-color: transparent;
+    border: 0;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1030px) and (min-width: 425px) {
+
+    .container
+    {
+        grid-template-rows: 15% 45% 15% 15%;
+    }
+
+    h2 {
+        font: italic normal normal 30px/6px Roboto;
+    }
+    .question
+    {
+        justify-content: space-around;
+
+    }
+    .img
+    {
+        width: 25em;
+        height: 20em;
+    }
+    img
+    {
+        height: 17em;
+        width: 20em;
+    }
+    .answers {
+        width: 50vw;
+    }
+    ol {
+        font: normal normal normal 20px/30px Roboto;
+    }
+    li{
+        width: 45vw;
+    }
+    .test-buttons {
+        align-items: flex-start;
+    }
+
+    #next_question {
+        font: italic normal normal 22px/30px Roboto;
+    }
+
+    .test-end {
+        align-items: flex-start;
+    }
+}
+
+
+
+@media only screen and (max-device-width: 420px)
+{
+
+    .container {
+
+        display: grid;
+        grid-template-rows: 8% 74% 8%;
+
+    }
+
+    .menu {
+
+        background:#FFFFFF 0% 0% no-repeat padding-box;
+        box-shadow: 0px 0px 0px #FFFFFF;
+        border: 0px solid #FFFFFF;
+        border-radius: 0px;
+    }
+
+    .account {
+        display: flex;
+        justify-content: space-evenly;
+        width: 27%;
+
+    }
+
+    .fas{
+        font-size: 65px;
+        color: white;
+
+    }
+    h1 {
+        font: italic normal bold 55px/57px Roboto
+    }
+
+    h2 {
+        font: italic normal normal 45px/47px Roboto
+    }
+
+    .test-menu {
+        display: flex;
+        justify-content: space-between;
+        font: italic normal bold 35px/45px Roboto;
+        letter-spacing: 0px;
+        margin-left: 2em;
+    }
+
+    .question {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .img {
+
+        height: 35%;
+        width: 70%;
+    }
+
+    img
+    {
+        height: 100%;
+        width: 100%;
+    }
+
+    .answers {
+
+        height: 50%;
+        width: 90%;
+        margin-left: 1em;
+        text-shadow: none;
+    }
+
+    li {
+        margin: 60px 0;
+        width: 90%;
+    }
+    ol {
+        font: normal normal normal 35px/40px Roboto;
+    }
+
+    h3 {
+        font: italic normal bold 50px/60px Roboto;
+    }
+
+    .test-buttons {
+
+        display: flex;
+        justify-content: center;
+        opacity: 0.90;
+
+    }
+
+    #next_question
+    {
+        font: italic normal normal 45px/45px Roboto;
+        color: #4B6280;
+        border-radius: 30px;
+        padding: 0.5em;
+    }
+
+    #button-end
+    {
+        background-color: transparent;
+        border: none;
+        margin-right: 2em;
+        font: italic normal normal 35px/40px Roboto;
+        align-self: center;
+    }
+
+}

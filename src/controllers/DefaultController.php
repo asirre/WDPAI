@@ -1,17 +1,51 @@
 <?php
 
 require_once 'AppController.php';
+require_once __DIR__ . '/../shared/Shared.php';
 
 class DefaultController extends AppController {
 
     public function index() {
-        //TODO display login.php
+
         $this->render('login');
     }
 
-    public function projects() {
-        //TODO display projects.php
-        $this->render('projects');
+    private function renderSecure($name){
+        Shared::checkSession();
+        $this->render($name);
     }
+
+    public function main() {
+
+        $this->renderSecure('main');
+
+    }
+
+
+    public function boat() {
+
+        $this->renderSecure('boat');
+    }
+
+    public function drive() {
+
+        $this->renderSecure('drive');
+    }
+
+    public function anchors() {
+
+        $this->renderSecure('anchors');
+    }
+
+
+    public function sails() {
+
+        $this->renderSecure('sails');
+    }
+
+
+
+
+
 
 }

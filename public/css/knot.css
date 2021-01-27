@@ -1,0 +1,175 @@
+body {
+    margin: 0;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+
+    display: grid;
+    grid-template-rows: 10% 75% 15%;
+
+}
+
+.knots {
+
+    display: grid;
+    grid-template-rows: 20% 80%;
+}
+
+
+.name {
+    font: italic normal bold 15px/27px Roboto;
+    letter-spacing: 0px;
+    color: #244066;
+    opacity: 0.92;
+    align-self: center;
+    margin-left: 1.5em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.info
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+img{
+
+    height: 13em;
+    width: 17em;
+    border-radius: 20px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+}
+
+p {
+    height: 7em;
+    width: 42em;
+    font: italic normal bold 18px/25px Roboto;
+    letter-spacing: 0px;
+    color: #033E6A;
+    opacity: 1;
+}
+
+.next, .prev, #new_knot, .upload
+{
+    font: italic normal normal 18px/24px Roboto;
+    letter-spacing: 0px;
+    color: #4B6280;
+    opacity: 0.87;
+    background-color: transparent;
+    border: 0px solid transparent;
+}
+
+
+
+.knots_buttons {
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+@media screen and (max-width: 1030px) and (min-width: 425px) {
+    h1 {
+        font: italic normal bold 45px/47px Roboto;
+    }
+    img {
+        height: 20em;
+        width: 25em;
+    }
+    p {
+        height: 10em;
+        width: 32em;
+        font: italic normal bold 25px/30px Roboto;
+    }
+    .knots_buttons{
+        align-items: flex-start;
+
+    }
+
+    .next.prev {
+        font: italic normal normal 22px/30px Roboto;
+    }
+}
+
+@media only screen and (max-device-width: 420px)
+{
+
+    .container {
+        width: 100vw;
+        height: 100vh;
+        display: grid; /*rozmieszczenie elementów w wierszach lub kolumnach */
+        grid-template-rows: 10% 82% 8%;
+
+    }
+
+    .knots {
+
+        grid-template-rows: 15% 85%;
+    }
+
+    .name {
+        align-self: center;
+        font: italic normal bold 35px/45px Roboto;
+        letter-spacing: 0px;
+    }
+
+    .img {
+
+        height: 35%;
+        width: 70%;
+    }
+
+    img
+    {
+        height: 100%;
+        width: 100%;
+    }
+    p {
+        height: 55%;
+        width: 90%;
+        margin-left: 1em;
+        font: italic normal bold 50px/60px Roboto;
+    }
+
+    .knots_buttons {
+
+        display: flex;
+        justify-content: space-evenly;
+        background: #3C5576 0% 0% no-repeat padding-box;
+        box-shadow: 0px -6px 6px #00000029;
+        border: 1px solid #707070;
+        border-radius: 22px;
+        opacity: 0.90;
+
+
+    }
+
+
+    button {
+        margin-left: 2.5em;
+        margin-right: 2.5em;
+        font: italic normal bold 35px/45px Roboto;
+        letter-spacing: 0px;
+        color: #FFFFFF;
+        opacity: 0.87;
+    }
+
+    .next,.prev
+    {
+        font: italic normal normal 45px/45px Roboto;
+    }
+
+
+
+
+
+}

@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 15% 85%;
+}
+
+.results {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font: normal normal normal 23px/27px Roboto;
+    color: #555555;
+
+}
+h2 {
+    background-color: pink;
+    border-radius: 100%;
+    padding: 2em;
+    opacity: 80%;
+    font: normal normal normal 35px/37px Roboto;
+    color: white;
+
+}
+
+
+#save-result {
+    color: #4B6280;
+}
